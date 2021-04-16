@@ -19,20 +19,20 @@ body {
   height: 100%;
 
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
-  font-family: $font-family--;
-  color: $color-default-black;
+  line-height: 21px;
+  font-family: $font-main;
+  color: $color-text;
 
-  background-color: $color-default-white;
+  background-color: $color-fonbasic;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  color: $color-default-black;
+  color: $color-text;
   text-decoration: none;
 }
 
@@ -53,11 +53,12 @@ textarea {
 // rgba не подойдет, сконвертируйте цвет в hex без прозрачности
 // если в стилях уже используется box-shadow есть другое решение -
 // задать к списку транзишенов `background-color 10000000s ease-out`
-input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-default-white;
 
-  -webkit-text-fill-color: $color-default-black;
-}
+// input:-webkit-autofill {
+//   box-shadow: inset 0 0 0 1000px $color-default-white;
+
+//   -webkit-text-fill-color: $color-default-black;
+// }
 
 // firefox placeholder \ invalid fix + ios bdrs
 input,

@@ -1,45 +1,28 @@
-// Colors
-//---------------------------------
-// https://www.htmlcsscolor.com/hex/334482
+// viewports
+//-----------
+$viewport--sm: 320px;
+$viewport--md: 768px;
+$viewport--lg: 1024px;
+$viewport--xl: 1366px;
+// $viewport--xxl: 1800px;
 
-// Default
+//timing
+//-----------
+$transition-base: 0.3s ease;
 
-$color-default-black:             #000000;
-$color-default-white:             #ffffff;
-$color-transparent:               rgba(255, 255, 255, 0);
+//fonts
+//-----------
+$font-main: "Poppins", "Verdana", sans-serif;
+$font-title: "Cormorant Garamond", "Times", serif;
 
-// Base
+//colors
+//-----------
+$color-fonbasic:rgb(255, 255, 255);
+$color-logo:rgb(168, 123, 98);
+$color-text: rgb(29, 22, 19);
+$color-optional: rgb(155, 153, 151);
+$color-blog: rgb(240, 234, 228);
 
-$color-black:                     #0e0e0e;
-$color-white:                     #f2f2f2;
-$color-blue:                      #2c39f2;
-
-// Gradient
-
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-
-// Typography
-//---------------------------------
-
-$font-family--:                     "", "Arial", sans-serif;
-
-// Animation
-//---------------------------------
-
-$default-transition-settings:       0.3s ease;
-$modal-transition-settings:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
-// Viewports
-//---------------------------------
-
-$viewport--sm:                      320px;
-$viewport--md:                      768px;
-$viewport--lg:                      1024px;
-$viewport--xl:                      1440px;
-$viewport--xxl:                     1920px;
-
-// Retina
-//---------------------------------
-
-$retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
+$color-footer: rgb(0, 0, 0);
+$color-transparent: transparent;
+$color-overlay:  rgba(29, 22, 19, 0.25);
