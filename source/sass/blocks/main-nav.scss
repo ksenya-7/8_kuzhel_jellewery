@@ -28,6 +28,7 @@
   display: flex;
 
   width: 493px;
+  margin-left: 10px;
   padding: 0;
   list-style: none;
 
@@ -47,15 +48,25 @@
 .main-nav__toggle {
   display: none;
 
+  transition: opacity $transition-base;
+
   @include viewport--md {
     display: flex;
     position: absolute;
     z-index: 1;
-    top: -71px;
+    top: -72px;
     left: 0;
   }
 
   @include viewport--sm {
-    top: -54px;
+    top: -55px;
+    left: -4px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: none;
+    opacity: 0.5;
   }
 }

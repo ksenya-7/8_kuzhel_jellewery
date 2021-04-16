@@ -129,6 +129,8 @@
 
   font-size: 14px;
 
+  transition: opacity $transition-base;
+
   @include viewport--md {
     padding-bottom: 10px;
   }
@@ -156,6 +158,8 @@
   color: $color-fonbasic;
   background-color: $color-transparent;
   border: none;
+
+  transition: opacity $transition-base;
 
   &:hover,
   &:focus {
@@ -244,6 +248,8 @@
 }
 
 .footer__item a {
+  transition: opacity $transition-base;
+
   &:hover,
   &:focus {
     outline: none;
