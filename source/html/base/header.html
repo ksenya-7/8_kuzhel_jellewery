@@ -1,28 +1,95 @@
-<header class="header @@if (context.mod) { header--@@mod }">
+<header class="header">
   <div class="header__wrapper">
-    <a class="header__logo" @@if (!context.main) { href="main.html"} aria-label="Переход на главную">
-      Логотип
-    </a>
-
-    <nav class="main-nav">
-      <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-        <svg width="20" height="20">
-          <use xlink:href="#icon-burger"></use>
+    <div class="header__wrapper-top">
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <div class="header__form">
+          <button class="header__button" type="submit" aria-label="search">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="#000000">
+              <use xlink:href="#icon_loop"></use>
+            </svg>
+          </button>
+          <input
+            id="search"
+            type="search"
+            name="search"
+            placeholder="Type here to search"
+            aria-label="field for search"
+            autocomplete="off"
+            required
+          />
+        </div>
+      </form>
+      <a
+        class="header__logo"
+        @@if
+        (!context.main)
+        {
+        href="main.html"
+        }
+        aria-label="Переход на главную"
+      >
+        <svg width="66" height="66" viewBox="0 0 66 66" fill="#A87B62">
+          <use xlink:href="#logo"></use>
         </svg>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Страница 1</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>Страница 2</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 2) { href="#" }>Страница 3</a>
-          </li>
-        </ul>
+      </a>
+      <div class="header__icon-cart">
+        <svg
+          width="20"
+          height="18"
+          viewBox="0 0 20 18"
+          fill="none"
+          stroke="#1D1613"
+        >
+          <use xlink:href="#icon_cart"></use>
+        </svg>
       </div>
-    </nav>
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="#">Login</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Cart <span>0</span> </a>
+        </li>
+      </ul>
+    </div>
+    <div class="header__wrapper-bottom">
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <button
+            class="main-nav__toggle btn-reset"
+            type="button"
+            aria-label="Menu display switch"
+            aria-pressed="false"
+          >
+            <svg
+              width="25"
+              height="18"
+              viewBox="0 0 25 18"
+              fill="none"
+              stroke="#1D1613"
+            >
+              <use xlink:href="#icon_burger"></use>
+            </svg>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">What’s new</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Chokers</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Necklaces</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Rings</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Earrings</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </div>
 </header>
