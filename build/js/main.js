@@ -98,6 +98,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_ie_fix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/ie-fix */ "./js/utils/ie-fix.js");
 /* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ "./js/utils/ios-vh-fix.js");
 /* harmony import */ var _modules_init_modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/init-modals */ "./js/modules/init-modals.js");
+/* harmony import */ var _modules_init_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/init-menu */ "./js/modules/init-menu.js");
+
 
 
  // Utils
@@ -108,6 +110,38 @@ Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__["iosVhFix"])(); // Modules
 // ---------------------------------
 
 Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModals"])();
+Object(_modules_init_menu__WEBPACK_IMPORTED_MODULE_3__["initMenu"])();
+
+/***/ }),
+
+/***/ "./js/modules/init-menu.js":
+/*!*********************************!*\
+  !*** ./js/modules/init-menu.js ***!
+  \*********************************/
+/*! exports provided: initMenu */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initMenu", function() { return initMenu; });
+var body = document.querySelector('body');
+var nav = document.querySelector('.header');
+var wrapper = document.querySelector('.header__wrapper');
+var navToggle = document.querySelector('.header__toggle');
+
+var initMenu = function initMenu() {
+  if (nav && navToggle) {
+    nav.classList.remove('header--no-js');
+    navToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      body.classList.toggle('scroll-lock');
+      nav.classList.toggle('header--open');
+      wrapper.classList.toggle('header__wrapper--open');
+    });
+  }
+};
+
+
 
 /***/ }),
 

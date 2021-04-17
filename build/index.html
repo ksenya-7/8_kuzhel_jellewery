@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <meta name="description" content="CH - internet-shop of jewellery" />
+<title>CH</title>
 
 <!-- генерируйте favicon тут - https://realfavicongenerator.net/ -->
 <!-- ! в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"-->
@@ -72,7 +73,6 @@
 
 <link rel="stylesheet" href="css/style.min.css" />
 
-    <title>CH</title>
 
     <!-- <style>
       main > .container {
@@ -152,7 +152,7 @@
 </symbol></svg></div>
 
     <div class="wrapper">
-      <header class="header">
+      <header class="header header--no-js">
   <div class="header__wrapper">
     <div class="header__wrapper-top">
       <form action="https://echo.htmlacademy.ru" method="get">
@@ -173,26 +173,29 @@
           />
         </div>
       </form>
+
       <a
         class="header__logo"
         
         aria-label="Переход на главную"
       >
-        <svg width="66" height="66" viewBox="0 0 66 66" fill="#A87B62">
+        <svg width="66" height="66" viewBox="0 0 66 66" fill="currentColor">
           <use xlink:href="#logo"></use>
         </svg>
       </a>
+
       <div class="header__icon-cart">
         <svg
           width="20"
           height="18"
           viewBox="0 0 20 18"
           fill="none"
-          stroke="#1D1613"
+          stroke="currentColor"
         >
           <use xlink:href="#icon_cart"></use>
         </svg>
       </div>
+
       <ul class="header__list">
         <li class="header__item">
           <a href="#">Login</a>
@@ -201,26 +204,49 @@
           <a href="#">Cart <span>0</span> </a>
         </li>
       </ul>
+
+      <button
+        class="header__toggle btn-reset"
+        type="button"
+        aria-label="Menu display switch"
+        aria-pressed="false"
+      >
+        <svg
+          width="25"
+          height="18"
+          viewBox="0 0 25 18"
+          fill="none"
+          stroke="currentColor"
+        >
+          <use xlink:href="#icon_burger"></use>
+        </svg>
+      </button>
     </div>
     <div class="header__wrapper-bottom">
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <button
-            class="main-nav__toggle btn-reset"
-            type="button"
-            aria-label="Menu display switch"
-            aria-pressed="false"
-          >
-            <svg
-              width="25"
-              height="18"
-              viewBox="0 0 25 18"
-              fill="none"
-              stroke="#1D1613"
-            >
-              <use xlink:href="#icon_burger"></use>
-            </svg>
-          </button>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <div class="main-nav__form">
+              <button
+                class="main-nav__button"
+                type="submit"
+                aria-label="search"
+              >
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="#ffffff">
+                  <use xlink:href="#icon_loop"></use>
+                </svg>
+              </button>
+              <input
+                id="search-menu"
+                type="search"
+                name="search-menu"
+                aria-label="field for search"
+                autocomplete="off"
+                required
+              />
+            </div>
+          </form>
+
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">What’s new</a>
@@ -238,6 +264,21 @@
               <a href="#" class="main-nav__link">Earrings</a>
             </li>
           </ul>
+
+          <ul class="main-nav__list-about">
+            <li class="main-nav__item-about">
+              <a href="#" class="main-nav__link-about">About CH</a>
+            </li>
+            <li class="main-nav__item-about">
+              <a href="#" class="main-nav__link-about">Stores & Hours</a>
+            </li>
+
+            <li class="main-nav__item-about">
+              <a href="#" class="main-nav__link-about">Contact Us</a>
+            </li>
+          </ul>
+
+          <a class="main-nav__login" href="#">Login</a>
         </div>
       </nav>
     </div>
@@ -375,7 +416,7 @@
 
     </div>
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
