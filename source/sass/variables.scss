@@ -1,31 +1,30 @@
 // viewports
-//-----------
-$viewport--sm: 320px;
-$viewport--md: 768px;
-$viewport--lg: 1024px;
-$viewport--xl: 1366px;
-// $viewport--xxl: 1800px;
+//------------------------------
+$viewport--sm:                  320px;
+$viewport--md:                  768px;
+$viewport--lg:                  1024px;
+$viewport--xl:                  1366px;
 
 //timing
-//-----------
-$transition-base: 0.3s ease;
+//------------------------------
+$transition-base:               0.3s ease;
 
 //fonts
-//-----------
-$font-main: "Poppins", "Verdana", sans-serif;
-$font-title: "Cormorant Garamond", "Times", serif;
+//------------------------------
+$font-main:                     "Poppins", "Verdana", sans-serif;
+$font-title:                    "Cormorant Garamond", "Times", serif;
 
 //colors
-//-----------
-$color-fonbasic:rgb(255, 255, 255);
-$color-tint15:rgba(255, 255, 255, 0.15);
-$color-tint75:rgba(255, 255, 255, 0.75);
-$color-logo:rgb(168, 123, 98);
-$color-text: rgb(29, 22, 19);
-$color-optional: rgb(155, 153, 151);
-$color-line: rgb(246, 245, 244);
-$color-blog: rgb(240, 234, 228);
+//------------------------------
+$color-fonbasic:                rgb(255, 255, 255);
+$color-tint15:                  rgba(255, 255, 255, 0.15);
+$color-tint75:                  rgba(255, 255, 255, 0.75);
+$color-logo:                    rgb(168, 123, 98);
+$color-text:                    rgb(29, 22, 19);
+$color-optional:                rgb(155, 153, 151);
+$color-line:                    rgb(246, 245, 244);
+$color-blog:                    rgb(240, 234, 228);
 
-$color-footer: rgb(0, 0, 0);
-$color-transparent: rgba(255, 255, 255, 0);
-$color-overlay:  rgba(29, 22, 19, 0.25);
+$color-footer:                  rgb(0, 0, 0);
+$color-transparent:             rgba(255, 255, 255, 0);
+$color-overlay:                 rgba(29, 22, 19, 0.25);

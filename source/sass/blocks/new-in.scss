@@ -1,8 +1,4 @@
 .new-in {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   width: 100%;
   margin: 117px auto 0;
 
@@ -12,6 +8,28 @@
 
   @include viewport--sm {
     margin: 60px auto 0;
+  }
+}
+
+.new-in__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  width: 1170px;
+  margin: 0 auto;
+
+  @include viewport--lg {
+    width: 85.65%;
+  }
+
+  @include viewport--md {
+    width: 88.28%;
+  }
+
+  @include viewport--sm {
+    width: 290px;
   }
 }
 
@@ -43,20 +61,14 @@
 
 .new-in__slides {
   position: relative;
-  width: 1170px;
+  width: 100%;
   margin: 59px auto 0;
 
-  @include viewport--lg {
-    width: 85.65%;
-  }
-
   @include viewport--md {
-    width: 88.28%;
     margin: 50px auto 0;
   }
 
   @include viewport--sm {
-    width: 290px;
     margin: 40px auto 0;
   }
 }
@@ -65,8 +77,19 @@
   display: block;
   position: absolute;
   z-index: 10;
-  top: 10px;
+  top: 52px;
   left: 0;
+  width: 30px;
+  height: 11px;
+
+  @include viewport--md {
+    width: 36px;
+    height: 15px;
+  }
+
+  @include viewport--sm {
+    display: none;
+  }
 
   &:hover,
   &:focus {
@@ -82,8 +105,19 @@
 .new-in__arrow-right {
   position: absolute;
   z-index: 10;
-  top: 10px;
+  top: 52px;
   right: 0;
+  width: 30px;
+  height: 11px;
+
+  @include viewport--md {
+    width: 36px;
+    height: 15px;
+  }
+
+  @include viewport--sm {
+    display: none;
+  }
 
   &:hover,
   &:focus {
@@ -93,6 +127,26 @@
 
   &::after {
     content: "";
+  }
+}
+
+.new-in__arrow-left svg {
+  width: 30px;
+  height: 11px;
+
+  @include viewport--md {
+    width: 36px;
+    height: 15px;
+  }
+}
+
+.new-in__arrow-right svg {
+  width: 30px;
+  height: 11px;
+
+  @include viewport--md {
+    width: 36px;
+    height: 15px;
   }
 }
 
