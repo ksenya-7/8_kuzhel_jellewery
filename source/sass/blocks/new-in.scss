@@ -1,0 +1,131 @@
+.new-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin: 117px auto 0;
+}
+
+.new-in h2 {
+  margin: 0;
+
+  font-family: $font-title;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: $color-text;
+}
+
+.new-in__link {
+  text-align: center;
+  margin: 0;
+  margin-top: 22px;
+  padding: 4px 0;
+  border-bottom: 1px solid $color-logo;
+}
+
+.new-in__slides {
+  position: relative;
+  margin-top: 44px;
+}
+
+.new-in__arrow-left {
+  position: absolute;
+  top: -94px;
+  left: 0;
+  transition: opacity $transition-base;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: none;
+    opacity: 0.5;
+  }
+}
+
+.new-in__arrow-right {
+  position: absolute;
+  top: -94px;
+  right: 0;
+  transition: opacity $transition-base;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: none;
+    opacity: 0.5;
+  }
+}
+
+.new-in__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-in__photo {
+  order: -1;
+}
+
+.new-in__photo img {
+  height: 284px;
+}
+
+.new-in__slide dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  margin-top: 17px;
+}
+
+.new-in__slide dt,
+.new-in__slide dd {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.new-in__slide dd {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.new-in__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 53px auto;
+  padding: 0;
+  list-style: none;
+  color: $color-optional;
+
+  // @include viewport--lg {
+
+  // }
+
+  // @include viewport--md {
+
+  // }
+
+  // @include viewport--sm {
+
+  // }
+}
+
+.new-in__item {
+  margin-right: 15px;
+}
+
+.new-in__item:first-child {
+  color: $color-text;
+}
+
+.new-in__item:last-child {
+  margin-right: 0;
+}

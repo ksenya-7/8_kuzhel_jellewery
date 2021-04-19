@@ -99,10 +99,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/ios-vh-fix */ "./js/utils/ios-vh-fix.js");
 /* harmony import */ var _modules_init_modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/init-modals */ "./js/modules/init-modals.js");
 /* harmony import */ var _modules_init_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/init-menu */ "./js/modules/init-menu.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./js/modules/accordion.js");
 
 
 
- // Utils
+
+ // import {swiper} from './modules/swiper';
+// Utils
 // ---------------------------------
 
 Object(_utils_ie_fix__WEBPACK_IMPORTED_MODULE_0__["ieFix"])();
@@ -111,6 +114,63 @@ Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__["iosVhFix"])(); // Modules
 
 Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModals"])();
 Object(_modules_init_menu__WEBPACK_IMPORTED_MODULE_3__["initMenu"])();
+Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordion"])(); // swiper();
+
+/***/ }),
+
+/***/ "./js/modules/accordion.js":
+/*!*********************************!*\
+  !*** ./js/modules/accordion.js ***!
+  \*********************************/
+/*! exports provided: initAccordion */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAccordion", function() { return initAccordion; });
+var toggles = document.querySelectorAll('.faq__toggle');
+var blocks = document.querySelectorAll('.faq__answer');
+
+var closeLists = function closeLists() {
+  blocks.forEach(function (element) {
+    element.classList.add('faq__answer--js');
+    element.style.maxHeight = 0;
+  });
+};
+
+var deactivateToggles = function deactivateToggles() {
+  toggles.forEach(function (element) {
+    element.classList.remove('faq__toggle--active');
+  });
+};
+
+var toggleBlock = function toggleBlock(block, toggle) {
+  block.classList.toggle('faq__answer--js');
+  toggle.classList.toggle('faq__toggle--active');
+};
+
+var initAccordion = function initAccordion() {
+  closeLists();
+  deactivateToggles();
+  toggles.forEach(function (btn, index) {
+    btn.classList.remove('faq__toggle--no-js');
+    btn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      if (btn.classList.contains('faq__toggle--active')) {
+        toggleBlock(blocks[index], btn);
+      } else {
+        closeLists();
+        deactivateToggles();
+        var maxHeight = blocks[index].style.maxHeight;
+        blocks[index].style.maxHeight = maxHeight ? null : blocks[index].scrollHeight + 'px';
+        toggleBlock(blocks[index], btn);
+      }
+    });
+  });
+};
+
+
 
 /***/ }),
 

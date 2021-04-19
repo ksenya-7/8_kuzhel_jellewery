@@ -111,7 +111,8 @@
   display: flex;
 
   width: 100%;
-  margin-top: 44px;
+  margin-top: 34px;
+  padding-bottom: 2px;
   border-bottom: 1px solid $color-fonbasic;
 
   font-weight: 500;
@@ -121,7 +122,6 @@
   display: flex;
 
   margin-right: 27px;
-  padding-bottom: 15px;
 
   color: $color-optional;
   background-color: $color-transparent;
@@ -152,8 +152,7 @@
 
   width: 103px;
   margin-left: auto;
-  padding: 0;
-  padding-bottom: 15px;
+  padding: 10px 0;
 
   color: $color-fonbasic;
   background-color: $color-transparent;
@@ -228,12 +227,12 @@
 .footer__item {
   width: 100%;
   margin: 0;
-  margin-top: 20px;
+  margin-top: 21px;
   padding: 0;
 
-  @include viewport--md {
-    margin-top: 21px;
-  }
+  // @include viewport--md {
+  //   margin-top: 21px;
+  // }
 
   @include viewport--sm {
     &--mobile {
