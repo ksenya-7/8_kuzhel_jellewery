@@ -7,8 +7,14 @@
   margin: 106px auto 0;
   padding-bottom: 129px;
 
+  @include viewport--md {
+    margin: 72px auto 0;
+    padding-bottom: 79px;
+  }
+
   @include viewport--sm {
-    padding-bottom: 21px;
+    margin: 60px auto 0;
+    padding-bottom: 70px;
   }
 }
 

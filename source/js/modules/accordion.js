@@ -3,7 +3,7 @@ const blocks = document.querySelectorAll('.faq__answer');
 
 const closeLists = () => {
   blocks.forEach((element) => {
-    element.classList.add('faq__answer--js');
+    element.classList.add('faq__answer--close');
     element.style.maxHeight = 0;
   });
 };
@@ -15,7 +15,7 @@ const deactivateToggles = () => {
 };
 
 const toggleBlock = (block, toggle) => {
-  block.classList.toggle('faq__answer--js');
+  block.classList.toggle('faq__answer--close');
   toggle.classList.toggle('faq__toggle--active');
 };
 

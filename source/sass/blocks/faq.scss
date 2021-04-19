@@ -5,11 +5,14 @@
 
   width: 100%;
   margin: 120px auto 0;
-  // padding-bottom: 79px;
 
-  // @include viewport--sm {
-  //   padding-bottom: 21px;
-  // }
+  @include viewport--md {
+    margin: 68px auto 0;
+  }
+
+  @include viewport--sm {
+    margin: 58px auto 0;
+  }
 }
 
 .faq h2 {
@@ -50,17 +53,12 @@
 .faq__item {
   width: 100%;
   margin: 0;
-  // margin-top: -15px;
-  // padding: 42px 50px 50px 40px;
+
   border-bottom: 1px solid $color-logo;
 
-  // @include viewport--md {
-  //   padding: 42px 50px 71px 49px;
-  // }
-
-  // @include viewport--sm {
-  //   padding: 16px 30px 1px 25px;
-  // }
+  @include viewport--sm {
+    padding: 0 0 7px 0;
+  }
 }
 
 .faq__item:last-child {
@@ -74,13 +72,14 @@
   padding: 42px 49px 38px 42px;
 
   @include viewport--md {
-    padding: 42px 52px 37px 48px;
+    padding: 42px 52px 0 48px;
   }
 
   @include viewport--sm {
-    width: 184px;
+    align-items: flex-start;
+    width: 100%;
     min-height: 75px;
-    padding: 16px 30px 1px 25px;
+    padding: 15px 25px 10px;
   }
 }
 
@@ -91,6 +90,7 @@
   line-height: 23px;
 
   @include viewport--sm {
+    max-width: 89%;
     font-size: 16px;
     line-height: 22px;
   }
@@ -100,6 +100,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
   width: 16px;
   height: 16px;
   margin: 0;
@@ -107,9 +109,11 @@
   padding: 0;
 
   border: none;
-  background-color: transparent;
+  background-color: $color-transparent;
 
-  position: relative;
+  @include viewport--sm {
+    margin-top: 5px;
+  }
 
   &::before {
     position: absolute;
@@ -158,14 +162,16 @@
   width: 527px;
 
   @include viewport--md {
-    margin: -11px auto 41px 49px;
+    margin: 25px auto 46px 49px;
 
     width: 530px;
   }
 
-  // @include viewport--sm {
-
-  // }
+  @include viewport--sm {
+    width: 205px;
+    margin: 0 auto 0 24px;
+    padding-bottom: 2px;
+  }
 }
 
 .faq__answer p {
@@ -178,10 +184,10 @@
   }
 }
 
-.faq__answer--js {
+.faq__answer--close {
   max-height: 100%;
 }
 
-.faq__answer--js p {
+.faq__answer--close p {
   display: none;
 }

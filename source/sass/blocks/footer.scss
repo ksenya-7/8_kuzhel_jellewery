@@ -116,6 +116,10 @@
   border-bottom: 1px solid $color-fonbasic;
 
   font-weight: 500;
+
+  @include viewport--md {
+    margin-top: 33px;
+  }
 }
 
 .footer__field input {
@@ -130,10 +134,6 @@
   font-size: 14px;
 
   transition: opacity $transition-base;
-
-  @include viewport--md {
-    padding-bottom: 10px;
-  }
 
   @include viewport--sm {
     margin-right: 10px;

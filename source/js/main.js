@@ -4,7 +4,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/init-modals';
 import {initMenu} from './modules/init-menu';
 import {initAccordion} from './modules/accordion';
-import {swiper} from './vendor/swiper';
+import {slider} from './modules/slider';
 
 // Utils
 // ---------------------------------
@@ -18,4 +18,4 @@ iosVhFix();
 initModals();
 initMenu();
 initAccordion();
-swiper();
+slider();
