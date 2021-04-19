@@ -30,34 +30,39 @@
 
 .new-in__slides {
   position: relative;
-  margin-top: 44px;
+  width: 1170px;
+  margin: 44px auto 0;
 }
 
 .new-in__arrow-left {
   position: absolute;
-  top: -94px;
+  z-index: 10;
+  top: 10px;
   left: 0;
-  transition: opacity $transition-base;
+  background-color: #fff;
+  // transition: opacity $transition-base;
 
   &:hover,
   &:focus {
     cursor: pointer;
     outline: none;
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 }
 
 .new-in__arrow-right {
   position: absolute;
-  top: -94px;
+  z-index: 10;
+  top: 10px;
   right: 0;
-  transition: opacity $transition-base;
+  background-color: #fff;
+  // transition: opacity $transition-base;
 
   &:hover,
   &:focus {
     cursor: pointer;
     outline: none;
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 }
 
@@ -120,6 +125,15 @@
 
 .new-in__item {
   margin-right: 15px;
+
+  transition: color $transition-base;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: none;
+    color: $color-text;
+  }
 }
 
 .new-in__item:first-child {
