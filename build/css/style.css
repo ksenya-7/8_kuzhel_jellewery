@@ -1189,7 +1189,7 @@ button,
       width: 100%;
       background-color: #a87b62;
       position: absolute;
-      z-index: 1;
+      z-index: 10;
       max-height: 100vh;
       min-height: 100vh;
       overflow-y: scroll;
@@ -1757,12 +1757,13 @@ a.main-nav__login {
 .new-in__arrow-right {
   position: absolute;
   z-index: 10;
-  top: 52px;
+  top: 68px;
   right: 0;
   width: 30px;
   height: 11px; }
   @media (max-width: 1023px) {
     .new-in__arrow-right {
+      top: 63px;
       width: 36px;
       height: 15px; } }
   @media (max-width: 767px) {
@@ -1774,13 +1775,19 @@ a.main-nav__login {
   .new-in__arrow-right::after {
     content: ""; }
 
-.new-in__arrow-right svg,
 .new-in__arrow-left svg {
   width: 30px;
   height: 11px; }
   @media (max-width: 1023px) {
-    .new-in__arrow-right svg,
     .new-in__arrow-left svg {
+      width: 36px;
+      height: 15px; } }
+
+.new-in__arrow-right svg {
+  width: 30px;
+  height: 11px; }
+  @media (max-width: 1023px) {
+    .new-in__arrow-right svg {
       width: 36px;
       height: 15px; } }
 
@@ -1801,7 +1808,12 @@ a.main-nav__login {
 .new-in__photo {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
-          order: -1; }
+          order: -1;
+  width: 270px;
+  height: 284px; }
+  @media (max-width: 1365px) {
+    .new-in__photo {
+      width: 100%; } }
   @media (max-width: 1023px) {
     .new-in__photo {
       width: 324px;
@@ -1843,6 +1855,9 @@ a.main-nav__login {
   font-weight: 700;
   font-size: 14px;
   line-height: 18px; }
+
+.new-in__pagination {
+  position: static; }
 
 .new-in__list {
   display: -webkit-box;
@@ -2166,6 +2181,9 @@ a.main-nav__login {
   letter-spacing: 0.03em;
   text-align: center;
   color: #1d1613; }
+  @media (max-width: 767px) {
+    .faq h2 {
+      width: 290px; } }
 
 .faq__list {
   width: 970px;

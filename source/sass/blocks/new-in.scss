@@ -105,12 +105,13 @@
 .new-in__arrow-right {
   position: absolute;
   z-index: 10;
-  top: 52px;
+  top: 68px;
   right: 0;
   width: 30px;
   height: 11px;
 
   @include viewport--md {
+    top: 63px;
     width: 36px;
     height: 15px;
   }
@@ -161,6 +162,12 @@
 
 .new-in__photo {
   order: -1;
+  width: 270px;
+  height: 284px;
+
+  @include viewport--lg {
+    width: 100%;
+  }
 
   @include viewport--md {
     width: 324px;
@@ -204,6 +211,10 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
+}
+
+.new-in__pagination {
+  position: static;
 }
 
 .new-in__list {
