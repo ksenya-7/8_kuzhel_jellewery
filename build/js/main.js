@@ -150,7 +150,7 @@ var deactivateToggles = function deactivateToggles() {
 };
 
 var toggleBlock = function toggleBlock(block, toggle) {
-  block.classList.toggle('.cards__options--close');
+  block.classList.toggle('cards__options--close');
   toggle.classList.toggle('cards__toggle--active');
 };
 
@@ -161,16 +161,9 @@ var initAccordionCatalog = function initAccordionCatalog() {
     btn.classList.remove('cards__toggle--no-js');
     btn.addEventListener('click', function (evt) {
       evt.preventDefault();
-
-      if (btn.classList.contains('cards__toggle--active')) {
-        toggleBlock(blocks[index], btn);
-      } else {
-        closeLists();
-        deactivateToggles();
-        var maxHeight = blocks[index].style.maxHeight;
-        blocks[index].style.maxHeight = maxHeight ? null : blocks[index].scrollHeight + 'px';
-        toggleBlock(blocks[index], btn);
-      }
+      var maxHeight = blocks[index].style.maxHeight;
+      blocks[index].style.maxHeight = maxHeight ? null : blocks[index].scrollHeight + 'px';
+      toggleBlock(blocks[index], btn);
     });
   });
 };
@@ -342,15 +335,15 @@ var slider = function slider() {
     },
     // Responsive breakpoints
     breakpoints: {
-      // 320: {
-      //   pagination: {
-      //     el: '.swiper-pagination',
-      //     type: 'fraction',
-      //     renderFraction(currentClass, totalClass) {
-      //       return '<span class="' + currentClass + '"></span>' + ' <span>of</span> ' + '<span class="' + totalClass + '"></span>';
-      //     },
-      //   },
-      // },
+      320: {
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+          renderFraction: function renderFraction(currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + ' <span>of</span> ' + '<span class="' + totalClass + '"></span>';
+          }
+        }
+      },
       768: {
         pagination: {
           el: '.swiper-pagination',

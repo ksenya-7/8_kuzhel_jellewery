@@ -20,16 +20,15 @@ const slider = () => {
 
     // Responsive breakpoints
     breakpoints: {
-      // 320: {
-
-      //   pagination: {
-      //     el: '.swiper-pagination',
-      //     type: 'fraction',
-      //     renderFraction(currentClass, totalClass) {
-      //       return '<span class="' + currentClass + '"></span>' + ' <span>of</span> ' + '<span class="' + totalClass + '"></span>';
-      //     },
-      //   },
-      // },
+      320: {
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+          renderFraction(currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + ' <span>of</span> ' + '<span class="' + totalClass + '"></span>';
+          },
+        },
+      },
       768: {
         pagination: {
           el: '.swiper-pagination',

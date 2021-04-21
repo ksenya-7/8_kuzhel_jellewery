@@ -15,7 +15,7 @@ const deactivateToggles = () => {
 };
 
 const toggleBlock = (block, toggle) => {
-  block.classList.toggle('.cards__options--close');
+  block.classList.toggle('cards__options--close');
   toggle.classList.toggle('cards__toggle--active');
 };
 
@@ -27,15 +27,9 @@ const initAccordionCatalog = () => {
 
     btn.addEventListener('click', (evt) => {
       evt.preventDefault();
-      if (btn.classList.contains('cards__toggle--active')) {
-        toggleBlock(blocks[index], btn);
-      } else {
-        closeLists();
-        deactivateToggles();
-        const maxHeight = blocks[index].style.maxHeight;
-        blocks[index].style.maxHeight = (maxHeight) ? null : blocks[index].scrollHeight + 'px';
-        toggleBlock(blocks[index], btn);
-      }
+      const maxHeight = blocks[index].style.maxHeight;
+      blocks[index].style.maxHeight = (maxHeight) ? null : blocks[index].scrollHeight + 'px';
+      toggleBlock(blocks[index], btn);
     });
   });
 };

@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
 
-  padding: 120px 390px 120px;
+  padding: 92px 390px 95px;
 
   @include viewport--md {
     padding: 100px 140px 100px;
@@ -40,7 +40,7 @@
 
 .intro-catalog__text p {
   margin: 0;
-  margin-top: 20px;
+  margin-top: 2px;
   padding: 0;
 
   font-family: $font-title;
