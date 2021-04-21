@@ -100,8 +100,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_init_modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/init-modals */ "./js/modules/init-modals.js");
 /* harmony import */ var _modules_init_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/init-menu */ "./js/modules/init-menu.js");
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./js/modules/accordion.js");
-/* harmony import */ var _modules_accordion_catalog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/accordion-catalog */ "./js/modules/accordion-catalog.js");
-/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
+
 
 
 
@@ -117,58 +117,10 @@ Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__["iosVhFix"])(); // Modules
 
 Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModals"])();
 Object(_modules_init_menu__WEBPACK_IMPORTED_MODULE_3__["initMenu"])();
-Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordion"])();
-Object(_modules_accordion_catalog__WEBPACK_IMPORTED_MODULE_5__["initAccordionCatalog"])();
-Object(_modules_slider__WEBPACK_IMPORTED_MODULE_6__["slider"])();
-
-/***/ }),
-
-/***/ "./js/modules/accordion-catalog.js":
-/*!*****************************************!*\
-  !*** ./js/modules/accordion-catalog.js ***!
-  \*****************************************/
-/*! exports provided: initAccordionCatalog */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAccordionCatalog", function() { return initAccordionCatalog; });
-var toggles = document.querySelectorAll('.cards__toggle');
-var blocks = document.querySelectorAll('.cards__options');
-
-var closeLists = function closeLists() {
-  blocks.forEach(function (element) {
-    element.classList.add('cards__options--close');
-    element.style.maxHeight = 0;
-  });
-};
-
-var deactivateToggles = function deactivateToggles() {
-  toggles.forEach(function (element) {
-    element.classList.remove('cards__toggle--active');
-  });
-};
-
-var toggleBlock = function toggleBlock(block, toggle) {
-  block.classList.toggle('cards__options--close');
-  toggle.classList.toggle('cards__toggle--active');
-};
-
-var initAccordionCatalog = function initAccordionCatalog() {
-  closeLists();
-  deactivateToggles();
-  toggles.forEach(function (btn, index) {
-    btn.classList.remove('cards__toggle--no-js');
-    btn.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      var maxHeight = blocks[index].style.maxHeight;
-      blocks[index].style.maxHeight = maxHeight ? null : blocks[index].scrollHeight + 'px';
-      toggleBlock(blocks[index], btn);
-    });
-  });
-};
-
-
+Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionFaq"])();
+Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionFilter"])();
+Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionModalFilter"])();
+Object(_modules_slider__WEBPACK_IMPORTED_MODULE_5__["slider"])();
 
 /***/ }),
 
@@ -176,50 +128,84 @@ var initAccordionCatalog = function initAccordionCatalog() {
 /*!*********************************!*\
   !*** ./js/modules/accordion.js ***!
   \*********************************/
-/*! exports provided: initAccordion */
+/*! exports provided: initAccordionFaq, initAccordionFilter, initAccordionModalFilter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAccordion", function() { return initAccordion; });
-var toggles = document.querySelectorAll('.faq__toggle');
-var blocks = document.querySelectorAll('.faq__answer');
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAccordionFaq", function() { return initAccordionFaq; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAccordionFilter", function() { return initAccordionFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAccordionModalFilter", function() { return initAccordionModalFilter; });
+var togglesQuestion = document.querySelectorAll('.faq__toggle');
+var blocksAnswer = document.querySelectorAll('.faq__answer');
+var togglesFilter = document.querySelectorAll('.cards__toggle');
+var blocksFilter = document.querySelectorAll('.cards__options');
+var togglesModalFilter = document.querySelectorAll('.modal-filter__toggle');
+var blocksModalFilter = document.querySelectorAll('.modal-filter__options');
 
-var closeLists = function closeLists() {
+var closeLists = function closeLists(blocks) {
   blocks.forEach(function (element) {
-    element.classList.add('faq__answer--close');
+    element.classList.add('close');
     element.style.maxHeight = 0;
   });
 };
 
-var deactivateToggles = function deactivateToggles() {
+var deactivateToggles = function deactivateToggles(toggles) {
   toggles.forEach(function (element) {
-    element.classList.remove('faq__toggle--active');
+    element.classList.remove('active');
   });
 };
 
 var toggleBlock = function toggleBlock(block, toggle) {
-  block.classList.toggle('faq__answer--close');
-  toggle.classList.toggle('faq__toggle--active');
+  block.classList.toggle('close');
+  toggle.classList.toggle('active');
 };
 
-var initAccordion = function initAccordion() {
-  closeLists();
-  deactivateToggles();
-  toggles.forEach(function (btn, index) {
-    btn.classList.remove('faq__toggle--no-js');
+var initAccordionFaq = function initAccordionFaq() {
+  closeLists(blocksAnswer);
+  deactivateToggles(togglesQuestion);
+  togglesQuestion.forEach(function (btn, index) {
+    btn.classList.remove('no-js');
     btn.addEventListener('click', function (evt) {
       evt.preventDefault();
 
-      if (btn.classList.contains('faq__toggle--active')) {
-        toggleBlock(blocks[index], btn);
+      if (btn.classList.contains('active')) {
+        toggleBlock(blocksAnswer[index], btn);
       } else {
-        closeLists();
-        deactivateToggles();
-        var maxHeight = blocks[index].style.maxHeight;
-        blocks[index].style.maxHeight = maxHeight ? null : blocks[index].scrollHeight + 'px';
-        toggleBlock(blocks[index], btn);
+        closeLists(blocksAnswer);
+        deactivateToggles(togglesQuestion);
+        var maxHeight = blocksAnswer[index].style.maxHeight;
+        blocksAnswer[index].style.maxHeight = maxHeight ? null : blocksAnswer[index].scrollHeight + 'px';
+        toggleBlock(blocksAnswer[index], btn);
       }
+    });
+  });
+};
+
+var initAccordionFilter = function initAccordionFilter() {
+  closeLists(blocksFilter);
+  deactivateToggles(togglesFilter);
+  togglesFilter.forEach(function (btn, index) {
+    btn.classList.remove('no-js');
+    btn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var maxHeight = blocksFilter[index].style.maxHeight;
+      blocksFilter[index].style.maxHeight = maxHeight ? null : blocksFilter[index].scrollHeight + 'px';
+      toggleBlock(blocksFilter[index], btn);
+    });
+  });
+};
+
+var initAccordionModalFilter = function initAccordionModalFilter() {
+  closeLists(blocksModalFilter);
+  deactivateToggles(togglesModalFilter);
+  togglesModalFilter.forEach(function (btn, index) {
+    btn.classList.remove('no-js');
+    btn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var maxHeight = blocksModalFilter[index].style.maxHeight;
+      blocksModalFilter[index].style.maxHeight = maxHeight ? null : blocksModalFilter[index].scrollHeight + 'px';
+      toggleBlock(blocksModalFilter[index], btn);
     });
   });
 };
@@ -245,12 +231,12 @@ var navToggle = document.querySelector('.header__toggle');
 
 var initMenu = function initMenu() {
   if (nav && navToggle) {
-    nav.classList.remove('header--no-js');
+    nav.classList.remove('no-js');
     navToggle.addEventListener('click', function (e) {
       e.preventDefault();
       body.classList.toggle('scroll-lock');
-      nav.classList.toggle('header--open');
-      wrapper.classList.toggle('header__wrapper--open');
+      nav.classList.toggle('open');
+      wrapper.classList.toggle('open');
     });
   }
 };
@@ -271,32 +257,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initModals", function() { return initModals; });
 /* harmony import */ var _utils_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/modal */ "./js/utils/modal.js");
 
-var modals = document.querySelectorAll('.modal');
-var modalFeedback = document.querySelector('.modal--feedback');
-var modalFeedbackBtns = document.querySelectorAll('[data-modal="feedback"]');
-var modalSuccess = document.querySelector('.modal--success');
-var modalSuccessBtns = document.querySelectorAll('[data-modal="success"]'); // аргументы setupModal(modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock)
-// возможна инициализация только с первыми аргументом,
-// если вам нужно открывать модалку в другом месте под какими-нибудь условиями
+var modal = document.querySelector('.modal');
+var modalButtons = document.querySelectorAll('.open-modal');
+var textInput = document.querySelector('.modal__content input[type="email"]');
+
+var focusTextInput = function focusTextInput() {
+  if (textInput) {
+    setTimeout(function () {
+      textInput.focus();
+    }, 100);
+  }
+};
 
 var initModals = function initModals() {
-  // фикс для редких случаев, когда модалка появляется при загрузке страницы
-  window.addEventListener('load', function () {
-    if (modals.length) {
-      modals.forEach(function (el) {
-        setTimeout(function () {
-          el.classList.remove('modal--preload');
-        }, 100);
-      });
-    }
-  });
-
-  if (modalFeedback && modalFeedbackBtns.length) {
-    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modalFeedback, false, modalFeedbackBtns, false, false);
-  }
-
-  if (modalSuccess && modalSuccessBtns.length) {
-    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modalSuccess, false, modalSuccessBtns);
+  if (modal && modalButtons.length) {
+    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modal, false, modalButtons, focusTextInput, false, false);
   }
 };
 
@@ -318,24 +293,12 @@ var slider = function slider() {
   // eslint-disable-next-line no-undef
   return new Swiper('.swiper-container--new-in', {
     speed: 500,
-    // Default parameters
-    slidesPerView: 2,
-    slidesPerGroup: 2,
     spaceBetween: 30,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function renderBullet(index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      }
-    },
     // Responsive breakpoints
     breakpoints: {
       320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
         pagination: {
           el: '.swiper-pagination',
           type: 'fraction',
@@ -345,6 +308,8 @@ var slider = function slider() {
         }
       },
       768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -356,7 +321,13 @@ var slider = function slider() {
       1024: {
         slidesPerView: 4,
         slidesPerGroup: 4,
-        spaceBetween: 30
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function renderBullet(index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          }
+        }
       }
     }
   });

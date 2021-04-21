@@ -149,7 +149,7 @@
     }
   }
 
-  &--active {
+  &.active {
     .faq__btn-close {
       display: flex;
     }
@@ -159,7 +159,7 @@
     }
   }
 
-  &--no-js {
+  &.no-js {
     display: none;
   }
 }
@@ -176,6 +176,14 @@
   @include viewport--sm {
     width: 205px;
   }
+
+  &.close {
+    max-height: 100%;
+  }
+
+  &.close p {
+    display: none;
+  }
 }
 
 .faq__answer p {
@@ -188,12 +196,4 @@
     font-size: 14px;
     line-height: 20px;
   }
-}
-
-.faq__answer--close {
-  max-height: 100%;
-}
-
-.faq__answer--close p {
-  display: none;
 }

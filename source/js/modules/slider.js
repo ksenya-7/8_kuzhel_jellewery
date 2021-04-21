@@ -2,25 +2,12 @@ const slider = () => {
   // eslint-disable-next-line no-undef
   return new Swiper('.swiper-container--new-in', {
     speed: 500,
-    // Default parameters
-    slidesPerView: 2,
-    slidesPerGroup: 2,
     spaceBetween: 30,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet(index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      },
-    },
-
     // Responsive breakpoints
     breakpoints: {
       320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
         pagination: {
           el: '.swiper-pagination',
           type: 'fraction',
@@ -30,6 +17,8 @@ const slider = () => {
         },
       },
       768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -41,7 +30,13 @@ const slider = () => {
       1024: {
         slidesPerView: 4,
         slidesPerGroup: 4,
-        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet(index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        },
       },
     },
   });

@@ -1,9 +1,39 @@
 .cards {
   display: flex;
-  flex-wrap: wrap;
   width: 1170px;
   margin: 80px auto 0;
   padding-bottom: 76px;
+
+  @include viewport--md {
+    flex-direction: column;
+    width: 88.29%;
+    margin: 26px auto 0;
+  }
+
+  @include viewport--sm {
+    width: 90.63%;
+    margin: 15px auto 0;
+    padding-bottom: 65px;
+  }
+}
+
+.cards__wrapper {
+  width: 100%;
+
+  @include viewport--md {
+    margin-top: 50px;
+  }
+
+  @include viewport--sm {
+    margin-top: 40px;
+  }
+}
+
+//фильтр
+.cards form {
+  @include viewport--md {
+    display: none;
+  }
 }
 
 .cards__filter {
@@ -33,17 +63,6 @@
   align-items: center;
 
   padding: 22px 25px 22px;
-
-  // @include viewport--md {
-  //   padding: 42px 52px 0 48px;
-  // }
-
-  // @include viewport--sm {
-  //   align-items: flex-start;
-  //   width: 100%;
-  //   min-height: 75px;
-  //   padding: 15px 25px 10px;
-  // }
 }
 
 .cards__name p {
@@ -89,14 +108,7 @@
     display: none;
   }
 
-  // .cards__btn-close svg {
-  //   @include viewport--md {
-  //     width: 23px;
-  //     height: 12px;
-  //   }
-  // }
-
-  &--active {
+  &.active {
     .cards__btn-close {
       display: flex;
     }
@@ -106,7 +118,7 @@
     }
   }
 
-  &--no-js {
+  &.no-js {
     display: none;
   }
 }
@@ -123,11 +135,11 @@
     font-size: 14px;
     line-height: 18px;
   }
-}
 
-.cards__options--close {
-  max-height: 100%;
-  display: none;
+  &.close {
+    max-height: 100%;
+    display: none;
+  }
 }
 
 .cards__list-filter {
@@ -146,7 +158,6 @@
   margin-bottom: 9px;
   padding: 0;
 }
-
 
 .cards__item-filter input {
   appearance: none;
@@ -285,6 +296,7 @@ input:checked + label::before {
   margin-right: 70px;
 }
 
+//карточки товара
 .cards__list {
   display: flex;
   flex-wrap: wrap;
@@ -292,6 +304,11 @@ input:checked + label::before {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include viewport--md {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .cards__item {
@@ -299,15 +316,29 @@ input:checked + label::before {
   flex-direction: column;
   align-items: center;
 
-  width: 270px;
   margin: 0;
   margin-right: 30px;
   margin-bottom: 36px;
   padding: 0;
+
+  @include viewport--sm {
+    width: 44.8%;
+    margin-bottom: 27px;
+  }
 }
 
 .cards__item:nth-child(3n) {
   margin-right: 0;
+
+  @include viewport--sm {
+    margin-right: 30px;
+  }
+}
+
+.cards__item:nth-child(2n) {
+  @include viewport--sm {
+    margin-right: 0;
+  }
 }
 
 .cards__photo {
@@ -320,8 +351,8 @@ input:checked + label::before {
   }
 
   @include viewport--md {
-    width: 324px;
-    height: 340px;
+    width: 206px;
+    height: 208px;
   }
 
   @include viewport--sm {
@@ -340,6 +371,7 @@ input:checked + label::before {
   flex-direction: column;
   align-items: center;
 
+  width: 100%;
   margin: 0;
   margin-top: 17px;
 }
@@ -367,6 +399,10 @@ input:checked + label::before {
   display: flex;
   width: 100%;
   margin-top: 36px;
+
+  @include viewport--sm {
+    margin-top: 14px;
+  }
 }
 
 .cards__pagination span {
@@ -377,6 +413,10 @@ input:checked + label::before {
     outline: none;
     opacity: 0.5;
   }
+
+  @include viewport--sm {
+    display: none;
+  }
 }
 
 .cards__pagination-list {
@@ -386,6 +426,15 @@ input:checked + label::before {
   list-style: none;
   margin: 0 auto 0 319px;
   padding: 0;
+
+  @include viewport--md {
+    margin: 0 auto 0 222px;
+  }
+
+  @include viewport--sm {
+    width: auto;
+    margin: 0 auto;
+  }
 }
 
 .cards__pagination-item {
@@ -394,9 +443,9 @@ input:checked + label::before {
   opacity: 0.5;
   transition: opacity $transition-base;
 
-  // @include viewport--sm {
-  //   margin-right: 10px;
-  // }
+  @include viewport--sm {
+    margin-right: 23px;
+  }
 
   &:hover,
   &:focus {
@@ -414,24 +463,25 @@ input:checked + label::before {
 }
 
 .cards__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  min-height: 68px;
-  margin-top: 25px;
-  padding: 10px;
-
-  background-color: $color-transparent;
-  border: none;
-
-  &--apply {
-    margin-top: 35px;
-    background-color: $color-logo;
-    color: $color-fonbasic;
-  }
+  margin-top: 35px;
 
   &--clear {
+    margin-top: 25px;
+
+    color: $color-text;
+    background-color: $color-transparent;
     border: 1px solid $color-logo;
+  }
+
+  &--tablet  {
+    display: none;
+
+    width: 100%;
+    background-color: $color-logo;
+
+    @include viewport--md {
+      display: flex;
+    }
   }
 }

@@ -11,11 +11,11 @@
   padding: 92px 390px 95px;
 
   @include viewport--md {
-    padding: 100px 140px 100px;
+    padding: 91px 140px 95px;
   }
 
   @include viewport--sm {
-    padding: 90px 25px;
+    padding: 79px 25px;
   }
 }
 
@@ -31,6 +31,10 @@
   letter-spacing: 0.03em;
 
   color: $color-fonbasic;
+
+  @include viewport--md {
+    letter-spacing: 0;
+  }
 
   // @include viewport--sm {
   //   font-size: 38px;

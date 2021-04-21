@@ -10,6 +10,7 @@
 @import "variables";
 @import "mixins";
 @import "global/fonts";
+@import "global/btn";
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
@@ -27,6 +28,8 @@
 @import "blocks/footer";
 @import "blocks/intro-catalog";
 @import "blocks/cards";
+@import "blocks/modal";
+@import "blocks/modal-filter";
 // @import "blocks/cards";
 
 

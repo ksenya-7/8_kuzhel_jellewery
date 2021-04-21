@@ -3,8 +3,10 @@ import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/init-modals';
 import {initMenu} from './modules/init-menu';
-import {initAccordion} from './modules/accordion';
-import {initAccordionCatalog} from './modules/accordion-catalog';
+import {initAccordionFaq} from './modules/accordion';
+import {initAccordionFilter} from './modules/accordion';
+import {initAccordionModalFilter} from './modules/accordion';
+
 
 import {slider} from './modules/slider';
 
@@ -19,6 +21,7 @@ iosVhFix();
 
 initModals();
 initMenu();
-initAccordion();
-initAccordionCatalog();
+initAccordionFaq();
+initAccordionFilter();
+initAccordionModalFilter();
 slider();
