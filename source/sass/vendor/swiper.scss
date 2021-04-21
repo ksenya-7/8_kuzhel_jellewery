@@ -302,9 +302,9 @@
   width: 8px;
   height: 8px;
   display: inline-block;
-  border-radius: 100%;
-  background: #000;
-  opacity: 0.2;
+  background-color: transparent;
+  margin-right: 15px;
+  opacity: 0.5;
 }
 
 button.swiper-pagination-bullet {
@@ -319,6 +319,7 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
+  background-color: transparent;
 }
 
 .swiper-pagination-bullet-active {

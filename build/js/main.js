@@ -100,7 +100,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_init_modals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/init-modals */ "./js/modules/init-modals.js");
 /* harmony import */ var _modules_init_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/init-menu */ "./js/modules/init-menu.js");
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./js/modules/accordion.js");
-/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
+/* harmony import */ var _modules_accordion_catalog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/accordion-catalog */ "./js/modules/accordion-catalog.js");
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
+
 
 
 
@@ -116,7 +118,64 @@ Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__["iosVhFix"])(); // Modules
 Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModals"])();
 Object(_modules_init_menu__WEBPACK_IMPORTED_MODULE_3__["initMenu"])();
 Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordion"])();
-Object(_modules_slider__WEBPACK_IMPORTED_MODULE_5__["slider"])();
+Object(_modules_accordion_catalog__WEBPACK_IMPORTED_MODULE_5__["initAccordionCatalog"])();
+Object(_modules_slider__WEBPACK_IMPORTED_MODULE_6__["slider"])();
+
+/***/ }),
+
+/***/ "./js/modules/accordion-catalog.js":
+/*!*****************************************!*\
+  !*** ./js/modules/accordion-catalog.js ***!
+  \*****************************************/
+/*! exports provided: initAccordionCatalog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initAccordionCatalog", function() { return initAccordionCatalog; });
+var toggles = document.querySelectorAll('.cards__toggle');
+var blocks = document.querySelectorAll('.cards__options');
+
+var closeLists = function closeLists() {
+  blocks.forEach(function (element) {
+    element.classList.add('cards__options--close');
+    element.style.maxHeight = 0;
+  });
+};
+
+var deactivateToggles = function deactivateToggles() {
+  toggles.forEach(function (element) {
+    element.classList.remove('cards__toggle--active');
+  });
+};
+
+var toggleBlock = function toggleBlock(block, toggle) {
+  block.classList.toggle('.cards__options--close');
+  toggle.classList.toggle('cards__toggle--active');
+};
+
+var initAccordionCatalog = function initAccordionCatalog() {
+  closeLists();
+  deactivateToggles();
+  toggles.forEach(function (btn, index) {
+    btn.classList.remove('cards__toggle--no-js');
+    btn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      if (btn.classList.contains('cards__toggle--active')) {
+        toggleBlock(blocks[index], btn);
+      } else {
+        closeLists();
+        deactivateToggles();
+        var maxHeight = blocks[index].style.maxHeight;
+        blocks[index].style.maxHeight = maxHeight ? null : blocks[index].scrollHeight + 'px';
+        toggleBlock(blocks[index], btn);
+      }
+    });
+  });
+};
+
+
 
 /***/ }),
 
@@ -268,33 +327,43 @@ var slider = function slider() {
     speed: 500,
     // Default parameters
     slidesPerView: 2,
+    slidesPerGroup: 2,
     spaceBetween: 30,
-    // Responsive breakpoints
-    breakpoints: {
-      // when window width is >= 1024px
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          createPagination: true,
-          // type: 'fraction',
-          // renderFraction(currentClass, totalClass) {
-          //   return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
-          // },
-          clickable: true
-        }
-      }
-    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
     pagination: {
       el: '.swiper-pagination',
-      type: 'fraction',
-      renderFraction: function renderFraction(currentClass, totalClass) {
-        return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+      clickable: true,
+      renderBullet: function renderBullet(index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      }
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      // 320: {
+      //   pagination: {
+      //     el: '.swiper-pagination',
+      //     type: 'fraction',
+      //     renderFraction(currentClass, totalClass) {
+      //       return '<span class="' + currentClass + '"></span>' + ' <span>of</span> ' + '<span class="' + totalClass + '"></span>';
+      //     },
+      //   },
+      // },
+      768: {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function renderBullet(index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          }
+        }
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 30
       }
     }
   });

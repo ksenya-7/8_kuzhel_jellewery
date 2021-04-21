@@ -77,10 +77,11 @@
   display: block;
   position: absolute;
   z-index: 10;
-  top: 52px;
-  left: 0;
+  top: 30px;
+  left: -2px;
   width: 30px;
   height: 11px;
+  margin-top: 0;
 
   @include viewport--md {
     width: 36px;
@@ -103,15 +104,16 @@
 }
 
 .new-in__arrow-right {
+  display: block;
   position: absolute;
   z-index: 10;
-  top: 68px;
-  right: 0;
+  top: 30px;
+  right: 5px;
   width: 30px;
   height: 11px;
+  margin-top: 0;
 
   @include viewport--md {
-    top: 63px;
     width: 36px;
     height: 15px;
   }
@@ -214,17 +216,14 @@
 }
 
 .new-in__pagination {
-  position: static;
-}
-
-.new-in__list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  position: static;
 
   margin: 53px auto;
   padding: 0;
-  list-style: none;
-  color: $color-optional;
+  color: $color-text;
 
   @include viewport--md {
     margin: 43px auto;
@@ -233,59 +232,16 @@
   @include viewport--sm {
     margin: 33px auto;
   }
-
-  &--desktop {
-    @include viewport--md {
-      display: none;
-    }
-  }
-
-  &--tablet {
-    display: none;
-
-    @include viewport--md {
-      display: flex;
-    }
-
-    @include viewport--sm {
-      display: none;
-    }
-  }
-
-  &--mobile {
-    display: none;
-
-    @include viewport--sm {
-      display: flex;
-    }
-  }
 }
 
-.new-in__item {
-  margin-right: 15px;
-
-  transition: color $transition-base;
-
-  @include viewport--md {
-    margin-right: 13px;
-  }
+.new-in__pagination span {
+  margin-right: 14px;
 
   @include viewport--sm {
-    margin-right: 9px;
-  }
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    outline: none;
-    color: $color-text;
+    margin-right: 10px;
   }
 }
 
-.new-in__item:first-child {
-  color: $color-text;
-}
-
-.new-in__item:last-child {
+.new-in__pagination span:last-of-type {
   margin-right: 0;
 }

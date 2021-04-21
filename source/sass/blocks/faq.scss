@@ -11,7 +11,7 @@
   }
 
   @include viewport--sm {
-    margin: 58px auto 0;
+    margin: 59px auto 0;
   }
 }
 
@@ -55,13 +55,19 @@
 }
 
 .faq__item {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 0;
 
   border-bottom: 1px solid $color-logo;
 
+  @include viewport--md {
+    padding: 44px 53px 44px 48px;
+  }
+
   @include viewport--sm {
-    padding: 0 0 7px 0;
+    padding: 15px 25px 21px;
   }
 }
 
@@ -76,14 +82,12 @@
   padding: 42px 49px 38px 42px;
 
   @include viewport--md {
-    padding: 42px 52px 0 48px;
+    padding: 0;
   }
 
   @include viewport--sm {
     align-items: flex-start;
     width: 100%;
-    min-height: 75px;
-    padding: 15px 25px 10px;
   }
 }
 
@@ -161,28 +165,26 @@
 }
 
 .faq__answer {
+  width: 527px;
   margin: -32px auto 41px 49px;
 
-  width: 527px;
-
   @include viewport--md {
-    margin: 25px auto 46px 49px;
-
     width: 530px;
+    margin: 0;
   }
 
   @include viewport--sm {
     width: 205px;
-    margin: 0 auto 0 24px;
-    padding-bottom: 2px;
   }
 }
 
 .faq__answer p {
   margin: 0;
+  padding-top: 25px;
   font-weight: 400;
 
   @include viewport--sm {
+    padding-top: 15px;
     font-size: 14px;
     line-height: 20px;
   }

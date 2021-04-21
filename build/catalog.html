@@ -288,10 +288,550 @@
 
       <main>
         <div class="container">
-          <h1 class="visually-hidden">CH</h1>
+          <h1 class="visually-hidden">CH — catalog</h1>
 
-          <section>
+          <section class="intro-catalog">
             <h2 class="visually-hidden">Intro</h2>
+            <div class="intro-catalog__text">
+              <h3>ALL JEWELLERY</h3>
+              <p>
+                Discover picks of fashion's finest trends in our jewellery
+                catalog
+              </p>
+            </div>
+            <div class="intro-catalog__photo intro-catalog__photo--desktop">
+              <!-- 1х: 1366px; 2x: 2732px -->
+              <img
+                width="1366"
+                height="261"
+                src="img/content/catalog_intro-desktop@1x.jpg"
+                srcset="img/content/catalog_intro-desktop@2x.jpg 2x"
+                alt="background of intro-catalog"
+              />
+            </div>
+            <div class="intro-catalog__photo intro-catalog__photo--tablet">
+              <!-- 1х: 768px; 2x: 1536px -->
+              <img
+                width="768"
+                height="261"
+                src="img/content/catalog_intro-tablet@1x.jpg"
+                srcset="img/content/catalog_intro-tablet@2x.jpg 2x"
+                alt="background of intro-catalog"
+              />
+            </div>
+            <div class="intro-catalog__photo intro-catalog__photo--mobile">
+              <!-- 1х: 320px; 2x: 640px -->
+              <img
+                width="320"
+                height="261"
+                src="img/content/catalog_intro-mobile@1x.jpg"
+                srcset="img/content/catalog_intro-mobile@2x.jpg 2x"
+                alt="background of intro-catalog"
+              />
+            </div>
+          </section>
+
+          <section class="cards">
+            <h2 class="visually-hidden">Product cards</h2>
+
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <div class="cards__filter">
+                <div class="cards__field">
+                  <div class="cards__name">
+                    <p>Product</p>
+                    <button
+                      class="cards__toggle cards__toggle--no-js cards__toggle--active"
+                      type="button"
+                      aria-label="button for opening of question"
+                    >
+                      <span class="cards__btn-close">
+                        <svg
+                          width="15"
+                          height="8"
+                          viewBox="0 0 17 10"
+                          fill="none"
+                        >
+                          <use xlink:href="#pointer_top"></use>
+                        </svg>
+                      </span>
+                      <span class="cards__btn-open">
+                        <svg
+                          width="15"
+                          height="8"
+                          viewBox="0 0 17 10"
+                          fill="none"
+                        >
+                          <use xlink:href="#pointer_down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="cards__options">
+                    <ul class="cards__list-filter">
+                      <li class="cards__item-filter">
+                        <input
+                          type="checkbox"
+                          name="necklaces"
+                          value="necklaces"
+                          id="necklaces"
+                          checked
+                          class="cards__item-filter__input"
+                        />
+                        <label
+                          for="necklaces"
+                          class="cards__item-filter__label"
+                        >
+                          <span>Necklaces</span>
+                        </label>
+                      </li>
+
+                      <li class="cards__item-filter">
+                        <input
+                          type="checkbox"
+                          name="chokers"
+                          value="chokers"
+                          id="chokers"
+                          checked
+                        />
+                        <label for="chokers">
+                          <span>Chokers</span>
+                        </label>
+                      </li>
+
+                      <li class="cards__item-filter">
+                        <input
+                          type="checkbox"
+                          name="rings"
+                          value="rings"
+                          id="rings"
+                        />
+                        <label for="rings">
+                          <span>Rings</span>
+                        </label>
+                      </li>
+                      <li class="cards__item-filter">
+                        <input
+                          type="checkbox"
+                          name="earrings"
+                          value="earrings"
+                          id="earrings"
+                          checked
+                        />
+                        <label for="earrings">
+                          <span>Earrings</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="cards__field">
+                  <div class="cards__name">
+                    <p>Material</p>
+                    <button
+                      class="cards__toggle cards__toggle--no-js cards__toggle--active"
+                      type="button"
+                      aria-label="button for opening of question"
+                    >
+                      <span class="cards__btn-close">
+                        <svg
+                          width="15"
+                          height="8"
+                          viewBox="0 0 17 10"
+                          fill="none"
+                        >
+                          <use xlink:href="#pointer_top"></use>
+                        </svg>
+                      </span>
+                      <span class="cards__btn-open">
+                        <svg
+                          width="15"
+                          height="8"
+                          viewBox="0 0 17 10"
+                          fill="none"
+                        >
+                          <use xlink:href="#pointer_down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="cards__options">
+                    <ul class="cards__list">
+                      <li class="cards__item-filter">
+                        <input
+                          type="checkbox"
+                          name="gold"
+                          value="gold"
+                          id="gold"
+                        />
+                        <label for="gold">
+                          <span>Gold</span>
+                        </label>
+                      </li>
+
+                      <li class="cards__item-filter">
+                        <input
+                          type="checkbox"
+                          name="silver"
+                          value="silver"
+                          id="silver"
+                        />
+                        <label for="silver">
+                          <span>Silver</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="cards__field">
+                  <div class="cards__name">
+                    <p>Material</p>
+                    <button
+                      class="cards__toggle cards__toggle--no-js cards__toggle--active"
+                      type="button"
+                      aria-label="button for opening of question"
+                    >
+                      <span class="cards__btn-close">
+                        <svg
+                          width="15"
+                          height="8"
+                          viewBox="0 0 17 10"
+                          fill="none"
+                        >
+                          <use xlink:href="#pointer_top"></use>
+                        </svg>
+                      </span>
+                      <span class="cards__btn-open">
+                        <svg
+                          width="15"
+                          height="8"
+                          viewBox="0 0 17 10"
+                          fill="none"
+                        >
+                          <use xlink:href="#pointer_down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="cards__options">
+                    <ul class="cards__list">
+                      <li class="cards__item-filter">
+                        <input
+                          type="checkbox"
+                          name="flamingo"
+                          value="flamingo"
+                          id="flamingo"
+                        />
+                        <label for="flamingo">
+                          <span>Pink flamingo</span>
+                        </label>
+                      </li>
+
+                      <li class="cards__item-filter">
+                        <input
+                          type="checkbox"
+                          name="dreams"
+                          value="dreams"
+                          id="dreams"
+                        />
+                        <label for="dreams">
+                          <span>Dreams</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="cards__field">
+                  <div class="cards__name">
+                    <p>Price</p>
+                    <button
+                      class="cards__toggle cards__toggle--no-js cards__toggle--active"
+                      type="button"
+                      aria-label="button for opening of question"
+                    >
+                      <span class="cards__btn-close">
+                        <svg
+                          width="15"
+                          height="8"
+                          viewBox="0 0 17 10"
+                          fill="none"
+                        >
+                          <use xlink:href="#pointer_top"></use>
+                        </svg>
+                      </span>
+                      <span class="cards__btn-open">
+                        <svg
+                          width="15"
+                          height="8"
+                          viewBox="0 0 17 10"
+                          fill="none"
+                        >
+                          <use xlink:href="#pointer_down"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="cards__options">
+                    <span>$ 55</span>
+                    <span>$ 155</span>
+                  </div>
+                </div>
+                <button
+                  class="cards__button"
+                  type="submit"
+                  aria-label="subscription"
+                >
+                  Apply
+                </button>
+                <button
+                  class="cards__button"
+                  type="reset"
+                  aria-label="clear all"
+                >
+                  Clear All
+                </button>
+              </div>
+            </form>
+            <div class="cards__wrapper">
+              <ul class="cards__list">
+                <li class="cards__item">
+                  <dl>
+                    <dt>Double pearl earrings</dt>
+                    <dd>$ 115</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/double-pearl-earrings_desktop@1x.jpg"
+                      srcset="
+                        img/slides/double-pearl-earrings_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <dl>
+                    <dt>Choker with gold bead</dt>
+                    <dd>$ 55</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/black-choker-gold-bead_desktop@1x.jpg"
+                      srcset="
+                        img/slides/black-choker-gold-bead_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <dl>
+                    <dt>Gold chain</dt>
+                    <dd>$ 215</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/gold-layered-necklace_desktop@1x.jpg"
+                      srcset="
+                        img/slides/gold-layered-necklace_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <dl>
+                    <dt>Blue gemstone pendant</dt>
+                    <dd>$ 105</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/blue-gemstone-pendant_desktop@1x.jpg"
+                      srcset="
+                        img/slides/blue-gemstone-pendant_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <dl>
+                    <dt>Boho earrings</dt>
+                    <dd>$ 75</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/boho-earrings_desktop@1x.jpg"
+                      srcset="img/slides/boho-earrings_desktop@2x.jpg 2x"
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <dl>
+                    <dt>Gold bird necklace</dt>
+                    <dd>$ 135</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/bird-necklace_desktop@1x.jpg"
+                      srcset="img/slides/bird-necklace_desktop@2x.jpg 2x"
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <dl>
+                    <dt>Black leather choker</dt>
+                    <dd>$ 85</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/black-leather-choker-necklace_desktop@1x.jpg"
+                      srcset="
+                        img/slides/black-leather-choker-necklace_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <dl>
+                    <dt>Necklace with amethyst</dt>
+                    <dd>$ 145</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/purple-gemstone-necklace_desktop@1x.jpg"
+                      srcset="
+                        img/slides/purple-gemstone-necklace_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <dl>
+                    <dt>Elephant earrings</dt>
+                    <dd>$ 95</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/elephant-earrings_desktop@1x.jpg"
+                      srcset="img/slides/elephant-earrings_desktop@2x.jpg 2x"
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <dl>
+                    <dt>Threader necklace</dt>
+                    <dd>$ 115</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/threader-necklace-closeup_desktop@1x.jpg"
+                      srcset="
+                        img/slides/threader-necklace-closeup_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <dl>
+                    <dt>Origami crane necklace</dt>
+                    <dd>$ 105</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/origami-crane-necklace_desktop@1x.jpg"
+                      srcset="
+                        img/slides/origami-crane-necklace_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <dl>
+                    <dt>Marble earrings</dt>
+                    <dd>$ 95</dd>
+                  </dl>
+
+                  <div class="cards__photo cards__photo--desktop">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img
+                      width="270"
+                      height="284"
+                      src="img/slides/marble-earrings_desktop@1x.jpg"
+                      srcset="img/slides/marble-earrings_desktop@2x.jpg 2x"
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                </li>
+              </ul>
+              <div class="cards__pagination">
+                <span>Previous</span>
+                <ul class="cards__pagination-list">
+                  <li class="cards__pagination-item">1</li>
+                  <li class="cards__pagination-item">2</li>
+                  <li class="cards__pagination-item">3</li>
+                  <li class="cards__pagination-item">4</li>
+                  <li class="cards__pagination-item">5</li>
+                </ul>
+                <span>Next</span>
+              </div>
+            </div>
           </section>
         </div>
       </main>
