@@ -4,23 +4,33 @@
   margin: 80px auto 0;
   padding-bottom: 76px;
 
+  @include viewport--lg {
+    width: 85.65%;
+  }
+
   @include viewport--md {
     flex-direction: column;
     width: 88.29%;
-    margin: 26px auto 0;
+    margin: 15px auto 0;
+    padding-bottom: 75px;
   }
 
   @include viewport--sm {
     width: 90.63%;
-    margin: 15px auto 0;
+    margin: 5px auto 0;
     padding-bottom: 65px;
   }
 }
 
 .cards__wrapper {
-  width: 100%;
+  width: 870px;
+
+  @include viewport--lg{
+    width: calc(100% - 280px);
+  }
 
   @include viewport--md {
+    width: 100%;
     margin-top: 50px;
   }
 
@@ -300,13 +310,12 @@ input:checked + label::before {
 .cards__list {
   display: flex;
   flex-wrap: wrap;
-  width: 870px;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
 
   @include viewport--md {
-    width: 100%;
     margin: 0 auto;
   }
 }
@@ -321,8 +330,16 @@ input:checked + label::before {
   margin-bottom: 36px;
   padding: 0;
 
+  @include viewport--lg{
+    width: calc((100% - 60px) / 3);
+  }
+
+  @include viewport--md {
+    margin-bottom: 37px;
+  }
+
   @include viewport--sm {
-    width: 44.8%;
+    width: calc((100% - 30px) / 2);
     margin-bottom: 27px;
   }
 }
@@ -348,16 +365,11 @@ input:checked + label::before {
 
   @include viewport--lg {
     width: 100%;
-  }
-
-  @include viewport--md {
-    width: 206px;
-    height: 208px;
+    height: auto;
   }
 
   @include viewport--sm {
-    width: 130px;
-    height: 136px;
+    min-height: 136px;
   }
 }
 
@@ -424,16 +436,14 @@ input:checked + label::before {
   flex-wrap: wrap;
   width: 200px;
   list-style: none;
-  margin: 0 auto 0 319px;
+  margin: 0 auto;
   padding: 0;
-
-  @include viewport--md {
-    margin: 0 auto 0 222px;
-  }
+  padding-left: 35px;
 
   @include viewport--sm {
     width: auto;
     margin: 0 auto;
+    padding-left: 0;
   }
 }
 
