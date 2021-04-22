@@ -224,11 +224,13 @@ var initAccordionModalFilter = function initAccordionModalFilter() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initMenu", function() { return initMenu; });
+/* harmony import */ var _utils_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/scroll-lock */ "./js/utils/scroll-lock.js");
+
 var body = document.querySelector('body');
 var nav = document.querySelector('.header');
 var wrapper = document.querySelector('.header__wrapper');
 var navToggle = document.querySelector('.header__toggle');
-var breakpointLg = window.matchMedia('(max-width: 768px)');
+var breakpointLg = window.matchMedia('(max-width: 1024px)');
 
 var initMenu = function initMenu() {
   if (nav && navToggle) {
@@ -243,9 +245,9 @@ var initMenu = function initMenu() {
 
   if (breakpointLg.matches) {
     window.addEventListener('orientationchange', function () {
-      body.classList.remove('scroll-lock');
       nav.classList.remove('open');
       wrapper.classList.remove('open');
+      Object(_utils_scroll_lock__WEBPACK_IMPORTED_MODULE_0__["enableScrolling"])();
     });
   }
 };

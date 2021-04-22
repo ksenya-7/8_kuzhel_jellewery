@@ -25,7 +25,7 @@
 .cards__wrapper {
   width: 870px;
 
-  @include viewport--lg{
+  @include viewport--lg {
     width: calc(100% - 280px);
   }
 
@@ -188,8 +188,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  // min-height: 39px;
-  padding-left: 25px;
+  max-width: 212px;
+  padding: 0 25px;
 
   cursor: pointer;
 
@@ -330,7 +330,7 @@ input:checked + label::before {
   margin-bottom: 36px;
   padding: 0;
 
-  @include viewport--lg{
+  @include viewport--lg {
     width: calc((100% - 60px) / 3);
   }
 
@@ -390,9 +390,15 @@ input:checked + label::before {
 
 .cards__item dt,
 .cards__item dd {
+  width: 270px;
+
   margin: 0;
   margin-top: 5px;
   text-align: center;
+
+  @include viewport--lg {
+    width: 100%;
+  }
 }
 
 .cards__item dt {
@@ -484,7 +490,7 @@ input:checked + label::before {
     border: 1px solid $color-logo;
   }
 
-  &--tablet  {
+  &--tablet {
     display: none;
 
     width: 100%;
