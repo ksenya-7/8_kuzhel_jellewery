@@ -108,6 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // Utils
 // ---------------------------------
 
@@ -121,6 +122,7 @@ Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionFaq"])();
 Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionFilter"])();
 Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionModalFilter"])();
 Object(_modules_slider__WEBPACK_IMPORTED_MODULE_5__["slider"])();
+Object(_modules_slider__WEBPACK_IMPORTED_MODULE_5__["sliderCard"])();
 
 /***/ }),
 
@@ -294,24 +296,31 @@ var initModals = function initModals() {
 /*!******************************!*\
   !*** ./js/modules/slider.js ***!
   \******************************/
-/*! exports provided: slider */
+/*! exports provided: slider, sliderCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "slider", function() { return slider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderCard", function() { return sliderCard; });
+var breakpointMd = window.matchMedia('(max-width: 767px)');
+
 var slider = function slider() {
   // eslint-disable-next-line no-undef
   return new Swiper('.swiper-container--new-in', {
     speed: 500,
     spaceBetween: 30,
+    navigation: {
+      nextEl: '.new-in__arrow-right',
+      prevEl: '.new-in__arrow-left'
+    },
     // Responsive breakpoints
     breakpoints: {
       320: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.new-in__pagination',
           type: 'fraction',
           renderFraction: function renderFraction(currentClass, totalClass) {
             return '<span class="' + currentClass + '"></span>' + ' <span>of</span> ' + '<span class="' + totalClass + '"></span>';
@@ -322,7 +331,7 @@ var slider = function slider() {
         slidesPerView: 2,
         slidesPerGroup: 2,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.new-in__pagination',
           clickable: true,
           renderBullet: function renderBullet(index, className) {
             return '<span class="' + className + '">' + (index + 1) + '</span>';
@@ -333,7 +342,7 @@ var slider = function slider() {
         slidesPerView: 4,
         slidesPerGroup: 4,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.new-in__pagination',
           clickable: true,
           renderBullet: function renderBullet(index, className) {
             return '<span class="' + className + '">' + (index + 1) + '</span>';
@@ -342,6 +351,27 @@ var slider = function slider() {
       }
     }
   });
+}; // let sliderCard = null;
+// eslint-disable-next-line consistent-return
+
+
+var sliderCard = function sliderCard() {
+  if (breakpointMd.matches) {
+    // eslint-disable-next-line no-undef
+    return new Swiper('.gallery__swiper-container', {
+      speed: 500,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: '.gallery__pagination',
+        type: 'fraction',
+        renderFraction: function renderFraction(currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' + ' <span>of</span> ' + '<span class="' + totalClass + '"></span>';
+        }
+      }
+    });
+  }
 };
 
 

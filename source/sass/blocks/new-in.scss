@@ -9,6 +9,19 @@
   @include viewport--sm {
     margin: 60px auto 0;
   }
+
+  &--card {
+    padding-bottom: 85px;
+
+    @include viewport--md {
+      padding-bottom: 45px;
+    }
+
+    @include viewport--sm {
+      margin-top: 56px;
+      padding-bottom: 33px;
+    }
+  }
 }
 
 .new-in__wrapper {
@@ -179,10 +192,10 @@
     width: 100%;
   }
 
-  // @include viewport--md {
-  //   width: 324px;
-  //   height: 340px;
-  // }
+  @include viewport--md {
+    // width: 324px;
+    height: 340px;
+  }
 
   @include viewport--sm {
     // width: 130px;

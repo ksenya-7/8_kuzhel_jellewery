@@ -9,6 +9,7 @@ import {initAccordionModalFilter} from './modules/accordion';
 
 
 import {slider} from './modules/slider';
+import {sliderCard} from './modules/slider';
 
 // Utils
 // ---------------------------------
@@ -25,3 +26,4 @@ initAccordionFaq();
 initAccordionFilter();
 initAccordionModalFilter();
 slider();
+sliderCard();

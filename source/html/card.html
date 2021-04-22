@@ -56,53 +56,72 @@
           <section class="gallery">
             <h2 class="visually-hidden">Gallery</h2>
             <div class="gallery__wrapper">
-              <div class="gallery__pictures">
-                <div class="gallery__picture-big">
-                  <!-- 1х: 470px; 2x: 940px -->
-                  <img
-                    width="470"
-                    height="435"
-                    src="img/content/card/necklace-detail_desktop@1x.jpg"
-                    srcset="img/content/card/necklace-detail_desktop@2x.jpg 2x"
-                    alt="photo of jewellery"
-                  />
+              <div class="swiper-container gallery__swiper-container">
+                <div class="swiper-wrapper gallery__pictures">
+                  <div
+                    class="swiper-slide gallery__picture-big gallery__picture-big--desktop"
+                  >
+                    <!-- 1х: 470px; 2x: 940px -->
+                    <img
+                      width="470"
+                      height="435"
+                      src="img/content/card/necklace-detail_desktop@1x.jpg"
+                      srcset="
+                        img/content/card/necklace-detail_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                  <div
+                    class="swiper-slide gallery__picture-big gallery__picture-big--mobile"
+                  >
+                    <!-- 1х: 319px; 2x: 638px -->
+                    <img
+                      width="319"
+                      height="286"
+                      src="img/content/card/necklace-detail_mobile@1x.jpg"
+                      srcset="img/content/card/necklace-detail_mobile@2x.jpg 2x"
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                  <div class="swiper-slide gallery__picture-small1">
+                    <!-- 1х: 100px; 2x: 200px -->
+                    <img
+                      width="100"
+                      height="125"
+                      src="img/content/card/gold-necklace-for-women_desktop@1x.jpg"
+                      srcset="
+                        img/content/card/gold-necklace-for-women_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                  <div class="swiper-slide gallery__picture-small2">
+                    <!-- 1х: 100px; 2x: 200px -->
+                    <img
+                      width="100"
+                      height="125"
+                      src="img/content/card/pretty-gold-necklace_desktop@1x.jpg"
+                      srcset="
+                        img/content/card/pretty-gold-necklace_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
+                  <div class="swiper-slide gallery__picture-small3">
+                    <!-- 1х: 100px; 2x: 200px -->
+                    <img
+                      width="100"
+                      height="125"
+                      src="img/content/card/womens-necklace-set_desktop@1x.jpg"
+                      srcset="
+                        img/content/card/womens-necklace-set_desktop@2x.jpg 2x
+                      "
+                      alt="photo of jewellery"
+                    />
+                  </div>
                 </div>
-                <div class="gallery__picture-small">
-                  <!-- 1х: 100px; 2x: 200px -->
-                  <img
-                    width="100"
-                    height="125"
-                    src="img/content/card/gold-necklace-for-women_desktop@1x.jpg"
-                    srcset="
-                      img/content/card/gold-necklace-for-women_desktop@2x.jpg 2x
-                    "
-                    alt="photo of jewellery"
-                  />
-                </div>
-                <div class="gallery__picture-small">
-                  <!-- 1х: 100px; 2x: 200px -->
-                  <img
-                    width="100"
-                    height="125"
-                    src="img/content/card/pretty-gold-necklace_desktop@1x.jpg"
-                    srcset="
-                      img/content/card/pretty-gold-necklace_desktop@2x.jpg 2x
-                    "
-                    alt="photo of jewellery"
-                  />
-                </div>
-                <div class="gallery__picture-small">
-                  <!-- 1х: 100px; 2x: 200px -->
-                  <img
-                    width="100"
-                    height="125"
-                    src="img/content/card/womens-necklace-set_desktop@1x.jpg"
-                    srcset="
-                      img/content/card/womens-necklace-set_desktop@2x.jpg 2x
-                    "
-                    alt="photo of jewellery"
-                  />
-                </div>
+                <div class="swiper-pagination gallery__pagination"></div>
               </div>
 
               <div class="gallery__description">
@@ -110,7 +129,8 @@
                 <span>$ 115</span>
 
                 <p>
-                  <a href="#">Description</a> <a href="#">Additional info</a>
+                  <a href="#" class="gallery__link-description">Description</a>
+                  <a href="#" class="gallery__link-info">Additional info</a>
                 </p>
 
                 <ul class="gallery__list-description">
@@ -143,14 +163,16 @@
                 </a>
                 <ul class="gallery__list">
                   <li class="gallery__item">14 Day Returns</li>
-                  <li class="gallery__item">2-Year Warranty</li>
+                  <li class="gallery__item gallery__item--center">
+                    2-Year Warranty
+                  </li>
                   <li class="gallery__item">Free Shipping</li>
                 </ul>
               </div>
             </div>
           </section>
 
-          <section class="new-in">
+          <section class="new-in new-in--card">
             <div class="new-in__wrapper">
               <h2>You May Also Like</h2>
 
