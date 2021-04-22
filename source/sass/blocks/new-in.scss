@@ -160,6 +160,14 @@
 
   width: 270px;
   margin-right: 30px;
+
+  @include viewport--lg {
+    width: calc((100% - 90px) / 4);
+  }
+
+  @include viewport--md {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .new-in__photo {
@@ -171,13 +179,13 @@
     width: 100%;
   }
 
-  @include viewport--md {
-    width: 324px;
-    height: 340px;
-  }
+  // @include viewport--md {
+  //   width: 324px;
+  //   height: 340px;
+  // }
 
   @include viewport--sm {
-    width: 130px;
+    // width: 130px;
     height: 136px;
   }
 }

@@ -228,6 +228,7 @@ var body = document.querySelector('body');
 var nav = document.querySelector('.header');
 var wrapper = document.querySelector('.header__wrapper');
 var navToggle = document.querySelector('.header__toggle');
+var breakpointLg = window.matchMedia('(max-width: 768px)');
 
 var initMenu = function initMenu() {
   if (nav && navToggle) {
@@ -237,6 +238,14 @@ var initMenu = function initMenu() {
       body.classList.toggle('scroll-lock');
       nav.classList.toggle('open');
       wrapper.classList.toggle('open');
+    });
+  }
+
+  if (breakpointLg.matches) {
+    window.addEventListener('orientationchange', function () {
+      body.classList.remove('scroll-lock');
+      nav.classList.remove('open');
+      wrapper.classList.remove('open');
     });
   }
 };
