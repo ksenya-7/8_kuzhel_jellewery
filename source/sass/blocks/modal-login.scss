@@ -1,0 +1,206 @@
+.modal-login__overlay {
+  background-color: $color-fonbasic;
+}
+
+.modal-login__wrapper {
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+.modal-login__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 40px;
+  width: 430px;
+  padding: 188px 45px 55px;
+  background-color: $color-blog;
+  box-shadow: 0 5px 32px $color-shadow;
+
+  @include viewport--md {
+    top: 20px;
+    width: 442px;
+    padding: 188px 51px 55px;
+  }
+
+  @include viewport--sm {
+    top: 10px;
+    width: 270px;
+    padding: 121px 15px 40px;
+  }
+}
+
+.modal-login__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 430px;
+  height: 138px;
+
+  @include viewport--md {
+    width: 442px;
+  }
+
+  @include viewport--sm {
+    width: 270px;
+  }
+}
+
+.modal-login__picture img {
+  width: 430px;
+
+  @include viewport--md {
+    width: 442px;
+    height: 138px;
+  }
+
+  @include viewport--sm {
+    width: 270px;
+    height: 84px;
+  }
+}
+
+.modal-login__content h2 {
+  margin: 0;
+
+  font-family: $font-title;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+
+  @include viewport--sm {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.modal-login__content form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.modal-login__field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+
+  @include viewport--sm {
+    margin-top: 30px;
+  }
+}
+
+.modal-login__field input {
+  margin-bottom: 40px;
+  padding: 0 0 9px 0;
+
+  background-color: $color-transparent;
+  border: none;
+  border-bottom: 1px solid $color-text;
+
+  font-size: 14px;
+  transition: opacity $transition-base;
+
+  @include viewport--sm {
+    margin-bottom: 33px;
+    padding: 0 0 10px 0;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+}
+
+.modal-login__forgot {
+  margin: 0;
+  margin-top: -35px;
+
+  color: $color-optional;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+
+  transition: opacity $transition-base;
+
+  @include viewport--sm {
+    margin-top: -28px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+}
+
+.modal-login__button {
+  margin-top: 45px;
+
+  @include viewport--sm {
+    margin-top: 35px;
+  }
+}
+
+.modal-login__text {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-optional;
+}
+
+.modal-login__text span {
+  padding-right: 5px;
+}
+
+.modal-login__link {
+  color: $color-text;
+
+  transition: opacity $transition-base;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+}
+
+.modal-login__close-btn {
+  right: 21px;
+  top: 19px;
+
+  @include viewport--md {
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  @include viewport--sm {
+    right: 16px;
+    top: 16px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.modal-login__close-btn svg {
+  width: 14px;
+  height: 14px;
+
+  @include viewport--md {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include viewport--sm {
+    width: 14px;
+    height: 14px;
+  }
+}

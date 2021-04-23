@@ -110,6 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // Utils
 // ---------------------------------
 
@@ -119,6 +120,7 @@ Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__["iosVhFix"])(); // Modules
 
 Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModalFilter"])();
 Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModalCard"])();
+Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModalLogin"])();
 Object(_modules_init_menu__WEBPACK_IMPORTED_MODULE_3__["initMenu"])();
 Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionFaq"])();
 Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionFilter"])();
@@ -264,31 +266,37 @@ var initMenu = function initMenu() {
 /*!***********************************!*\
   !*** ./js/modules/init-modals.js ***!
   \***********************************/
-/*! exports provided: initModalFilter, initModalCard */
+/*! exports provided: initModalFilter, initModalCard, initModalLogin */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initModalFilter", function() { return initModalFilter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initModalCard", function() { return initModalCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initModalLogin", function() { return initModalLogin; });
 /* harmony import */ var _utils_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/modal */ "./js/utils/modal.js");
 
 var modalFilter = document.querySelector('.modal-filter');
 var modalFilterButtons = document.querySelectorAll('.open-modal-filter');
 var modalCard = document.querySelector('.modal-card');
-var modalCardButtons = document.querySelectorAll('.open-modal-card'); // const textInput = document.querySelector('.modal__content input[type="email"]');
-// const focusTextInput = () => {
-//   if (textInput) {
-//     setTimeout(() => {
-//       textInput.focus();
-//     }, 100);
-//   }
-// };
-// const initModalLogin = () => {
-//   if (modalFilter&& modalButtons.length) {
-//     setupModal(modal, false, modalButtons, focusTextInput, false, false);
-//   }
-// };
+var modalCardButtons = document.querySelectorAll('.open-modal-card');
+var modalLogin = document.querySelector('.modal-login');
+var modalLoginButtons = document.querySelectorAll('.open-modal-login');
+var textInput = document.querySelector('.modal-login__content input[type="email"]');
+
+var focusTextInput = function focusTextInput() {
+  if (textInput) {
+    setTimeout(function () {
+      textInput.focus();
+    }, 100);
+  }
+};
+
+var initModalLogin = function initModalLogin() {
+  if (modalLogin && modalLoginButtons.length) {
+    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modalLogin, false, modalLoginButtons, focusTextInput, false, false);
+  }
+};
 
 var initModalFilter = function initModalFilter() {
   if (modalFilter && modalFilterButtons.length) {

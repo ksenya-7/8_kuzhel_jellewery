@@ -3,6 +3,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModalFilter} from './modules/init-modals';
 import {initModalCard} from './modules/init-modals';
+import {initModalLogin} from './modules/init-modals';
 import {initMenu} from './modules/init-menu';
 import {initAccordionFaq} from './modules/accordion';
 import {initAccordionFilter} from './modules/accordion';
@@ -23,6 +24,7 @@ iosVhFix();
 
 initModalFilter();
 initModalCard();
+initModalLogin();
 initMenu();
 initAccordionFaq();
 initAccordionFilter();
