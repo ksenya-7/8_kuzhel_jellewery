@@ -2,7 +2,7 @@ const breakpointMd = window.matchMedia('(max-width: 767px)');
 
 const slider = () => {
   // eslint-disable-next-line no-undef
-  return new Swiper('.swiper-container--new-in', {
+  return new Swiper('.new-in__swiper-container', {
     speed: 500,
     spaceBetween: 30,
     navigation: {
@@ -48,8 +48,6 @@ const slider = () => {
     },
   });
 };
-
-// let sliderCard = null;
 
 
 // eslint-disable-next-line consistent-return

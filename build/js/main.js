@@ -307,7 +307,7 @@ var breakpointMd = window.matchMedia('(max-width: 767px)');
 
 var slider = function slider() {
   // eslint-disable-next-line no-undef
-  return new Swiper('.swiper-container--new-in', {
+  return new Swiper('.new-in__swiper-container', {
     speed: 500,
     spaceBetween: 30,
     navigation: {
@@ -351,8 +351,7 @@ var slider = function slider() {
       }
     }
   });
-}; // let sliderCard = null;
-// eslint-disable-next-line consistent-return
+}; // eslint-disable-next-line consistent-return
 
 
 var sliderCard = function sliderCard() {

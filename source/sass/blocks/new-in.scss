@@ -70,6 +70,14 @@
     margin-top: 13px;
     padding: 5px 0;
   }
+
+  transition: opacity $transition-base;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
 }
 
 .new-in__slides {

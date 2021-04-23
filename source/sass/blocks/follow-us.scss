@@ -38,8 +38,16 @@
   padding: 4px 0;
   border-bottom: 1px solid $color-logo;
 
+  transition: opacity $transition-base;
+
   @include viewport--md {
     margin-top: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
   }
 }
 
