@@ -1,7 +1,8 @@
 import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
-import {initModals} from './modules/init-modals';
+import {initModalFilter} from './modules/init-modals';
+import {initModalCard} from './modules/init-modals';
 import {initMenu} from './modules/init-menu';
 import {initAccordionFaq} from './modules/accordion';
 import {initAccordionFilter} from './modules/accordion';
@@ -20,7 +21,8 @@ iosVhFix();
 // Modules
 // ---------------------------------
 
-initModals();
+initModalFilter();
+initModalCard();
 initMenu();
 initAccordionFaq();
 initAccordionFilter();

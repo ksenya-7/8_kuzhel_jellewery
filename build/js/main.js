@@ -109,6 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // Utils
 // ---------------------------------
 
@@ -116,7 +117,8 @@ Object(_utils_ie_fix__WEBPACK_IMPORTED_MODULE_0__["ieFix"])();
 Object(_utils_ios_vh_fix__WEBPACK_IMPORTED_MODULE_1__["iosVhFix"])(); // Modules
 // ---------------------------------
 
-Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModals"])();
+Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModalFilter"])();
+Object(_modules_init_modals__WEBPACK_IMPORTED_MODULE_2__["initModalCard"])();
 Object(_modules_init_menu__WEBPACK_IMPORTED_MODULE_3__["initMenu"])();
 Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionFaq"])();
 Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionFilter"])();
@@ -262,29 +264,47 @@ var initMenu = function initMenu() {
 /*!***********************************!*\
   !*** ./js/modules/init-modals.js ***!
   \***********************************/
-/*! exports provided: initModals */
+/*! exports provided: initModalFilter, initModalCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initModals", function() { return initModals; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initModalFilter", function() { return initModalFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initModalCard", function() { return initModalCard; });
 /* harmony import */ var _utils_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/modal */ "./js/utils/modal.js");
 
-var modal = document.querySelector('.modal');
-var modalButtons = document.querySelectorAll('.open-modal');
-var textInput = document.querySelector('.modal__content input[type="email"]');
+var modalFilter = document.querySelector('.modal-filter');
+var modalFilterButtons = document.querySelectorAll('.open-modal-filter');
+var modalCard = document.querySelector('.modal-card');
+var modalCardButtons = document.querySelectorAll('.open-modal-card'); // const textInput = document.querySelector('.modal__content input[type="email"]');
+// const focusTextInput = () => {
+//   if (textInput) {
+//     setTimeout(() => {
+//       textInput.focus();
+//     }, 100);
+//   }
+// };
+// const initModalLogin = () => {
+//   if (modalFilter&& modalButtons.length) {
+//     setupModal(modal, false, modalButtons, focusTextInput, false, false);
+//   }
+// };
 
-var focusTextInput = function focusTextInput() {
-  if (textInput) {
-    setTimeout(function () {
-      textInput.focus();
-    }, 100);
+var initModalFilter = function initModalFilter() {
+  if (modalFilter && modalFilterButtons.length) {
+    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modalFilter, false, modalFilterButtons, false, false, false);
   }
 };
 
-var initModals = function initModals() {
-  if (modal && modalButtons.length) {
-    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modal, false, modalButtons, focusTextInput, false, false);
+var initModalCard = function initModalCard() {
+  if (modalCardButtons.length) {
+    modalCardButtons.forEach(function (element) {
+      return element.removeAttribute('href');
+    });
+
+    if (modalCard) {
+      Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modalCard, false, modalCardButtons, false, true, false);
+    }
   }
 };
 
