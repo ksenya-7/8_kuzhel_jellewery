@@ -5,21 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <meta name="description" content="CH - internet-shop of jewellery" />
-<title>CH</title>
-
-<!-- генерируйте favicon тут - https://realfavicongenerator.net/ -->
-<!-- ! в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"-->
-
-<!-- <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-<link href="favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-<link href="favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-<link href="favicon/site.webmanifest" rel="manifest" crossorigin="use-credentials">
-<link color="#c84659" href="favicon/safari-pinned-tab.svg" rel="mask-icon">
-<link href="favicon/favicon.ico" rel="shortcut icon">
-<meta content="#ffffff" name="msapplication-TileColor">
-<meta content="favicon/browserconfig.xml" name="msapplication-config">
-<meta content="#ffffff" name="theme-color">
- -->
 
 <link
   rel="preload"
@@ -73,6 +58,7 @@
 
 <link rel="stylesheet" href="css/style.min.css" />
 
+    <title>CH - main page</title>
   </head>
   <body>
     <div style="display: none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow_left">
@@ -154,21 +140,23 @@
               </svg>
             </a>
 
-            <div class="header__icon-cart">
-              <svg
-                width="20"
-                height="18"
-                viewBox="0 0 20 18"
-                fill="none"
-                stroke="currentColor"
-              >
-                <use xlink:href="#icon_cart"></use>
-              </svg>
-            </div>
+            <a href="cart.html">
+              <div class="header__icon-cart">
+                <svg
+                  width="20"
+                  height="18"
+                  viewBox="0 0 20 18"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <use xlink:href="#icon_cart"></use>
+                </svg>
+              </div>
+            </a>
 
             <ul class="header__list">
               <li class="header__item">
-                <a href="login.html" class="open-modal-login">Login</a>
+                <a href="modal-login.html" class="open-modal-login">Login</a>
               </li>
               <li class="header__item">
                 <a href="cart.html">Cart <span>0</span> </a>
@@ -932,9 +920,9 @@
           <!-- класс js-invalid делает текст красным -->
           <div class="footer__field">
             <input
-              id="user-email"
+              id="email"
               type="email"
-              name="user-email"
+              name="email"
               placeholder="Your E-mail"
               aria-label="field for E-mail"
               autocomplete="off"
@@ -1064,6 +1052,7 @@
       placeholder="Your E-mail"
       minlength="7"
       aria-label="field for email"
+      autocomplete="off"
       required
     />
     <input
@@ -1073,6 +1062,7 @@
       placeholder="Password"
       minlength="7"
       aria-label="field for email"
+      autocomplete="off"
       required
     />
     <a class="modal-login__forgot" href="#">Forgot your password?</a>

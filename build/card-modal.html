@@ -58,8 +58,7 @@
 
 <link rel="stylesheet" href="css/style.min.css" />
 
-
-    <title>Product card of CH</title>
+    <title>Page of CH card</title>
   </head>
   <body>
     <div style="display: none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow_left">
@@ -127,19 +126,17 @@
         </svg>
       </a>
 
-      <a href="cart.html">
-        <div class="header__icon-cart">
-          <svg
-            width="20"
-            height="18"
-            viewBox="0 0 20 18"
-            fill="none"
-            stroke="currentColor"
-          >
-            <use xlink:href="#icon_cart"></use>
-          </svg>
-        </div>
-      </a>
+      <div class="header__icon-cart">
+        <svg
+          width="20"
+          height="18"
+          viewBox="0 0 20 18"
+          fill="none"
+          stroke="currentColor"
+        >
+          <use xlink:href="#icon_cart"></use>
+        </svg>
+      </div>
 
       <ul class="header__list">
         <li class="header__item">
@@ -233,385 +230,79 @@
 
       <main>
         <div class="container">
-          <h1 class="visually-hidden">CH</h1>
+          <div class="modal modal-card">
+            <div class="modal__wrapper modal-card__wrapper">
+              <div class="modal__overlay modal-card__overlay"></div>
+              <div class="modal__content modal-card__content">
+                <div class="modal-card__order">
+  <h3>The item was added to your cart</h3>
+  <div class="modal-card__description">
+    <div class="modal-card__picture">
+      <!-- 1х: 88px; 2x: 176px -->
+      <img
+        width="88"
+        height="79"
+        src="img/content/card/necklace-detail_mobile@1x.jpg"
+        srcset="img/content/card/necklace-detail_mobile@2x.jpg 2x"
+        alt="photo of jewellery"
+      />
+    </div>
 
-          <section class="gallery">
-            <h2 class="visually-hidden">Gallery</h2>
-            <div class="gallery__wrapper">
-              <div class="swiper-container gallery__swiper-container">
-                <div class="swiper-wrapper gallery__pictures">
-                  <div
-                    class="swiper-slide gallery__picture-big gallery__picture-big--desktop"
-                  >
-                    <!-- 1х: 470px; 2x: 940px -->
-                    <img
-                      width="470"
-                      height="435"
-                      src="img/content/card/necklace-detail_desktop@1x.jpg"
-                      srcset="
-                        img/content/card/necklace-detail_desktop@2x.jpg 2x
-                      "
-                      alt="photo of jewellery"
-                    />
-                  </div>
-                  <div
-                    class="swiper-slide gallery__picture-big gallery__picture-big--mobile"
-                  >
-                    <!-- 1х: 319px; 2x: 638px -->
-                    <img
-                      width="319"
-                      height="286"
-                      src="img/content/card/necklace-detail_mobile@1x.jpg"
-                      srcset="img/content/card/necklace-detail_mobile@2x.jpg 2x"
-                      alt="photo of jewellery"
-                    />
-                  </div>
-                  <div class="swiper-slide gallery__picture-small1">
-                    <!-- 1х: 100px; 2x: 200px -->
-                    <img
-                      width="100"
-                      height="125"
-                      src="img/content/card/gold-necklace-for-women_desktop@1x.jpg"
-                      srcset="
-                        img/content/card/gold-necklace-for-women_desktop@2x.jpg 2x
-                      "
-                      alt="photo of jewellery"
-                    />
-                  </div>
-                  <div class="swiper-slide gallery__picture-small2">
-                    <!-- 1х: 100px; 2x: 200px -->
-                    <img
-                      width="100"
-                      height="125"
-                      src="img/content/card/pretty-gold-necklace_desktop@1x.jpg"
-                      srcset="
-                        img/content/card/pretty-gold-necklace_desktop@2x.jpg 2x
-                      "
-                      alt="photo of jewellery"
-                    />
-                  </div>
-                  <div class="swiper-slide gallery__picture-small3">
-                    <!-- 1х: 100px; 2x: 200px -->
-                    <img
-                      width="100"
-                      height="125"
-                      src="img/content/card/womens-necklace-set_desktop@1x.jpg"
-                      srcset="
-                        img/content/card/womens-necklace-set_desktop@2x.jpg 2x
-                      "
-                      alt="photo of jewellery"
-                    />
-                  </div>
-                </div>
-                <div class="swiper-pagination gallery__pagination"></div>
-              </div>
+    <div class="modal-card__name">
+      <h4>Gold Necklace</h4>
+      <span>$ 115</span>
+    </div>
+    <div class="modal-card__quantity">
+      <span>
+        <svg width="14" height="14" viewBox="0 0 14 14">
+          <use xlink:href="#icon_plus"></use>
+        </svg>
+      </span>
+      <p>1</p>
+      <span>
+        <svg width="14" height="2" viewBox="0 0 14 2">
+          <use xlink:href="#icon_minus"></use>
+        </svg>
+      </span>
+    </div>
+  </div>
 
-              <div class="gallery__description">
-                <h3>Gold Necklace</h3>
-                <span>$ 115</span>
+  <div class="modal-card__text">
+    <span>You have 1 item in the cart</span>
+    <span>Cart subtotal: $ 115</span>
+  </div>
 
-                <p>
-                  <a href="#" class="gallery__link-description">Description</a>
-                  <a href="#" class="gallery__link-info">Additional info</a>
-                </p>
+  <div class="modal-card__buttons">
+    <a
+      class="modal-card__button modal-card__button--continue btn"
+      href="catalog.html"
+      aria-label="transfer to page of catalog"
+    >
+      Continue shopping
+    </a>
+    <a
+      class="modal-card__button btn"
+      href="cart.html"
+      aria-label="transfer to page of cart"
+    >
+      Checkout
+    </a>
+  </div>
 
-                <ul class="gallery__list-description">
-                  <li class="gallery__item-description">
-                    <dl>
-                      <dt>Metal type</dt>
-                      <dd>Gold 585</dd>
-                    </dl>
-                  </li>
-                  <li class="gallery__item-description">
-                    <dl>
-                      <dt>Stone</dt>
-                      <dd>Turquoise</dd>
-                    </dl>
-                  </li>
-                  <li class="gallery__item-description">
-                    <dl>
-                      <dt>Size</dt>
-                      <dd>18” / 20”</dd>
-                    </dl>
-                  </li>
-                </ul>
+  <button
+    class="modal__close-btn modal-card__close-btn btn-reset"
+    type="button"
+    aria-label="Закрыть попап"
+  >
+    <svg width="14" height="14" viewBox="0 0 14 14">
+      <use xlink:href="#icon_close"></use>
+    </svg>
+  </button>
+</div>
 
-                <a
-                  href="modal-card.html"
-                  class="gallery__button btn open-modal-card"
-                  aria-label="open modal window"
-                >
-                  Add to cart
-                </a>
-                <ul class="gallery__list">
-                  <li class="gallery__item">14 Day Returns</li>
-                  <li class="gallery__item gallery__item--center">
-                    2-Year Warranty
-                  </li>
-                  <li class="gallery__item">Free Shipping</li>
-                </ul>
               </div>
             </div>
-          </section>
-
-          <section class="new-in new-in--card">
-            <div class="new-in__wrapper">
-              <h2>You May Also Like</h2>
-
-              <a href="catalog.html" class="new-in__link">Shop Now</a>
-              <div class="swiper-button-prev new-in__arrow-left">
-                <svg
-                  width="30"
-                  height="11"
-                  viewBox="0 0 30 11"
-                  fill="none"
-                  stroke="#A87B62"
-                >
-                  <use xlink:href="#arrow_left"></use>
-                </svg>
-              </div>
-              <div class="swiper-button-next new-in__arrow-right">
-                <svg
-                  width="30"
-                  height="11"
-                  viewBox="0 0 30 11"
-                  fill="none"
-                  stroke="#A87B62"
-                >
-                  <use xlink:href="#arrow_right"></use>
-                </svg>
-              </div>
-
-              <div
-                class="swiper-container new-in__swiper-container new-in__slides"
-              >
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Necklace with amethyst</dt>
-                      <dd>$ 145</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/purple-gemstone-necklace_desktop@1x.jpg"
-                        srcset="
-                          img/slides/purple-gemstone-necklace_desktop@2x.jpg 2x
-                        "
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Layered сhoker</dt>
-                      <dd>$ 115</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/layered-choker-necklace_desktop@1x.jpg"
-                        srcset="
-                          img/slides/layered-choker-necklace_desktop@2x.jpg 2x
-                        "
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Gold chain</dt>
-                      <dd>$ 215</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/gold-layered-necklace_desktop@1x.jpg"
-                        srcset="
-                          img/slides/gold-layered-necklace_desktop@2x.jpg 2x
-                        "
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Galaxy earrings</dt>
-                      <dd>$ 95</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/galaxy-earrings_desktop@1x.jpg"
-                        srcset="img/slides/galaxy-earrings_desktop@2x.jpg 2x"
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Gold bird necklace</dt>
-                      <dd>$ 135</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/bird-necklace_desktop@1x.jpg"
-                        srcset="img/slides/bird-necklace_desktop@2x.jpg 2x"
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Black leather choker</dt>
-                      <dd>$ 85</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/black-leather-choker-necklace_desktop@1x.jpg"
-                        srcset="
-                          img/slides/black-leather-choker-necklace_desktop@2x.jpg 2x
-                        "
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Blue gemstone pendant</dt>
-                      <dd>$ 105</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/blue-gemstone-pendant_desktop@1x.jpg"
-                        srcset="
-                          img/slides/blue-gemstone-pendant_desktop@2x.jpg 2x
-                        "
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Boho earrings</dt>
-                      <dd>$ 75</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/boho-earrings_desktop@1x.jpg"
-                        srcset="img/slides/boho-earrings_desktop@2x.jpg 2x"
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Double pearl earrings</dt>
-                      <dd>$ 115</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/double-pearl-earrings_desktop@1x.jpg"
-                        srcset="
-                          img/slides/double-pearl-earrings_desktop@2x.jpg 2x
-                        "
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Elephant earrings</dt>
-                      <dd>$ 95</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/elephant-earrings_desktop@1x.jpg"
-                        srcset="img/slides/elephant-earrings_desktop@2x.jpg 2x"
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Marble earrings</dt>
-                      <dd>$ 95</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/marble-earrings_desktop@1x.jpg"
-                        srcset="img/slides/marble-earrings_desktop@2x.jpg 2x"
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide new-in__slide">
-                    <dl>
-                      <dt>Origami crane necklace</dt>
-                      <dd>$ 105</dd>
-                    </dl>
-
-                    <div class="new-in__photo new-in__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/origami-crane-necklace_desktop@1x.jpg"
-                        srcset="
-                          img/slides/origami-crane-necklace_desktop@2x.jpg 2x
-                        "
-                        alt="photo of jewellery"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-pagination new-in__pagination"></div>
-            </div>
-          </section>
+          </div>
         </div>
       </main>
 
@@ -626,9 +317,9 @@
           <!-- класс js-invalid делает текст красным -->
           <div class="footer__field">
             <input
-              id="email"
+              id="user-email"
               type="email"
-              name="email"
+              name="user-email"
               placeholder="Your E-mail"
               aria-label="field for E-mail"
               autocomplete="off"
@@ -733,139 +424,6 @@
   </div>
 </footer>
 
-    </div>
-    <div class="modal modal-card">
-      <div class="modal__wrapper modal-card__wrapper">
-        <div class="modal__overlay modal-card__overlay"></div>
-        <div class="modal__content modal-card__content">
-          <div class="modal-card__order">
-  <h3>The item was added to your cart</h3>
-  <div class="modal-card__description">
-    <div class="modal-card__picture">
-      <!-- 1х: 88px; 2x: 176px -->
-      <img
-        width="88"
-        height="79"
-        src="img/content/card/necklace-detail_mobile@1x.jpg"
-        srcset="img/content/card/necklace-detail_mobile@2x.jpg 2x"
-        alt="photo of jewellery"
-      />
-    </div>
-
-    <div class="modal-card__name">
-      <h4>Gold Necklace</h4>
-      <span>$ 115</span>
-    </div>
-    <div class="modal-card__quantity">
-      <span>
-        <svg width="14" height="14" viewBox="0 0 14 14">
-          <use xlink:href="#icon_plus"></use>
-        </svg>
-      </span>
-      <p>1</p>
-      <span>
-        <svg width="14" height="2" viewBox="0 0 14 2">
-          <use xlink:href="#icon_minus"></use>
-        </svg>
-      </span>
-    </div>
-  </div>
-
-  <div class="modal-card__text">
-    <span>You have 1 item in the cart</span>
-    <span>Cart subtotal: $ 115</span>
-  </div>
-
-  <div class="modal-card__buttons">
-    <a
-      class="modal-card__button modal-card__button--continue btn"
-      href="catalog.html"
-      aria-label="transfer to page of catalog"
-    >
-      Continue shopping
-    </a>
-    <a
-      class="modal-card__button btn"
-      href="cart.html"
-      aria-label="transfer to page of cart"
-    >
-      Checkout
-    </a>
-  </div>
-
-  <button
-    class="modal__close-btn modal-card__close-btn btn-reset"
-    type="button"
-    aria-label="Закрыть попап"
-  >
-    <svg width="14" height="14" viewBox="0 0 14 14">
-      <use xlink:href="#icon_close"></use>
-    </svg>
-  </button>
-</div>
-
-        </div>
-      </div>
-    </div>
-    <div class="modal modal-login">
-      <div class="modal__wrapper modal-login__wrapper">
-        <div class="modal__overlay modal-login__overlay"></div>
-        <div class="modal__content modal-login__content">
-          <h2>Log In</h2>
-<div class="modal-login__picture">
-  <!-- 1х: 430px; 2x: 860px -->
-  <img
-    width="430"
-    height="138"
-    src="img/content/login-desktop@1x.jpg"
-    srcset="img/content/login-desktop@2x.jpg 2x"
-    alt="photo of jewellery"
-  />
-</div>
-<form action="https://echo.htmlacademy.ru" method="get">
-  <div class="modal-login__field">
-    <input
-      id="user-email"
-      type="email"
-      name="user-email"
-      placeholder="Your E-mail"
-      minlength="7"
-      aria-label="field for email"
-      autocomplete="off"
-      required
-    />
-    <input
-      id="user-password"
-      type="password"
-      name="user-password"
-      placeholder="Password"
-      minlength="7"
-      aria-label="field for email"
-      autocomplete="off"
-      required
-    />
-    <a class="modal-login__forgot" href="#">Forgot your password?</a>
-  </div>
-  <button type="submit" class="modal-login__button btn">Log In</button>
-</form>
-
-<div class="modal-login__text">
-  <span>Don’t have an account?</span>
-  <a class="modal-login__link" href="#">Sign up</a>
-</div>
-
-<button
-  class="modal__close-btn modal-login__close-btn btn-reset"
-  type="button"
-  aria-label="Закрыть попап"
->
-  <svg width="14" height="14" viewBox="0 0 14 14">
-    <use xlink:href="#icon_close"></use>
-  </svg>
-</button>
-
-        </div>
-      </div>
     </div>
 
     <script src="js/vendor.js"></script>

@@ -259,6 +259,17 @@
   }
 }
 
+.gallery__link-description,
+.gallery__link-info {
+  transition: opacity $transition-base;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+}
+
 .gallery__list-description {
   display: flex;
   flex-direction: column;

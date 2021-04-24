@@ -5,9 +5,19 @@
 
   padding: 0;
 
+  &--window {
+    justify-content: center;
+    padding: 50px 0;
+  }
+
   @include viewport--sm {
     justify-content: center;
     align-items: center;
+
+    &--window {
+      align-items: flex-start;
+      padding: 50px 0;
+    }
   }
 }
 
@@ -19,9 +29,18 @@
   width: 478px;
   padding: 27px 18px 27px 20px;
 
+  &--window {
+    border: 1px solid $color-logo;
+    padding: 0 18px 27px 20px;
+  }
+
   @include viewport--sm {
     width: 290px;
     padding: 76px 10px 27px 10px;
+
+    &--window {
+      padding: 0 10px 27px 10px;
+    }
   }
 }
 
@@ -66,6 +85,19 @@
   align-items: center;
 
   padding: 34px 40px;
+  transition: opacity $transition-base;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+
+    p,
+    .modal-filter__toggle {
+      outline: none;
+      cursor: pointer;
+    }
+  }
 
   @include viewport--sm {
     padding: 24px 20px;
@@ -94,6 +126,12 @@
 
   border: none;
   background-color: $color-transparent;
+  transition: opacity $transition-base;
+
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
 
   @include viewport--sm {
     margin-top: 5px;
@@ -102,16 +140,24 @@
   &::before {
     position: absolute;
     content: "";
-    top: -30px;
-    right: -25px;
-    width: 250px;
-    height: 68px;
+    top: -37px;
+    right: -22px;
+    width: 410px;
+    height: 85px;
+
+    @include viewport--sm {
+      top: -32px;
+      right: 8px;
+      width: 245px;
+      height: 71px;
+    }
   }
 
   &:hover,
   &:focus {
     outline: none;
     cursor: pointer;
+    opacity: 0.5;
   }
 
   .modal-filter__btn-close {
@@ -192,7 +238,6 @@
 
   clip: rect(0 0 0 0);
   overflow: hidden;
-  // pointer-events: auto;
 }
 
 .modal-filter__item label {
@@ -202,7 +247,6 @@
 
   padding-left: 25px;
   cursor: pointer;
-  // pointer-events: auto;
 
   &::before {
     content: "";
@@ -214,7 +258,6 @@
     height: 15px;
 
     border: 1px solid $color-logo;
-    // background-color: $color-logo;
 
     @include viewport--md {
       width: 18px;
@@ -223,11 +266,23 @@
   }
 }
 
-input:checked + label::before {
+
+.modal-filter__item label:hover {
+  transition: opacity $transition-base;
+
+  &::before,
+  span {
+    outline: none;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+.modal-filter__item input:checked + label::before {
   background-color: $color-logo;
 }
 
-.modal-filter__item input:disabled + .modal-filter__item label {
+.modal-filter__item input:disabled + label {
   opacity: 0.5;
   pointer-events: none;
 }
@@ -242,16 +297,17 @@ input:checked + label::before {
   }
 }
 
-.modal-filter__item input:focus + .modal-filter__item label {
+.modal-filter__item input:focus + label {
   transition: opacity $transition-base;
 
-  &::before {
+  &::before,
+  span {
     outline: none;
     opacity: 0.5;
   }
 }
 
-.modal-filter__item input:checked:focus + .modal-filter__item label {
+.modal-filter__item input:checked:focus + label {
   &::before {
     background-color: $color-logo;
     outline: none;
@@ -364,5 +420,10 @@ input:checked + label::before {
 
   @include viewport--sm {
     right: -10px;
+  }
+
+  &::before {
+    width: 42px;
+    height: 42px;
   }
 }

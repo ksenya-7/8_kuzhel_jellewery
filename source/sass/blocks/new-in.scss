@@ -269,6 +269,12 @@
   @include viewport--sm {
     margin-right: 10px;
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.25;
+  }
 }
 
 .new-in__pagination span:last-of-type {

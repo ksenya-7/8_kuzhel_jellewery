@@ -106,11 +106,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
  // Utils
 // ---------------------------------
 
@@ -292,6 +287,15 @@ var focusTextInput = function focusTextInput() {
   }
 };
 
+var onEnterPress = function onEnterPress(evt, modal, callback) {
+  var isEnterKey = evt.key === 'Enter' || evt.key === '13';
+
+  if (isEnterKey && modal.classList.contains('modal--active')) {
+    evt.preventDefault();
+    closeModal(modal, callback);
+  }
+};
+
 var initModalLogin = function initModalLogin() {
   if (modalLogin && modalLoginButtons.length) {
     Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modalLogin, false, modalLoginButtons, focusTextInput, false, false);
@@ -307,11 +311,19 @@ var initModalFilter = function initModalFilter() {
 var initModalCard = function initModalCard() {
   if (modalCardButtons.length) {
     modalCardButtons.forEach(function (element) {
-      return element.removeAttribute('href');
+      element.removeAttribute('href');
+      element.setAttribute('tabindex', '0');
     });
 
     if (modalCard) {
       Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modalCard, false, modalCardButtons, false, true, false);
+      modalCardButtons.forEach(function (btn) {
+        btn.addEventListener('keyup', function (e) {
+          if (e.keyCode === 13) {
+            Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["openModal"])(modalCard, false, false);
+          }
+        });
+      });
     }
   }
 };

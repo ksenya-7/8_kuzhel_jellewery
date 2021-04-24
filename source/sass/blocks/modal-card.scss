@@ -11,15 +11,27 @@
   top: 300px;
   padding: 46px 35px 56px;
 
+  &--window {
+    top: 0;
+  }
+
   @include viewport--md {
     top: 198px;
     padding: 46px 29px 56px;
+
+    &--window {
+      top: 0;
+    }
   }
 
   @include viewport--sm {
     top: 57px;
     width: 290px;
     padding: 39px 15px 42px;
+
+    &--window {
+      top: 0;
+    }
   }
 }
 

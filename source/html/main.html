@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     @@include("source/html/base/head.html")
+    <title>CH - main page</title>
   </head>
   <body>
     <div style="display: none">@@include("build/img/sprite_auto.svg")</div>
@@ -49,21 +50,23 @@
               </svg>
             </a>
 
-            <div class="header__icon-cart">
-              <svg
-                width="20"
-                height="18"
-                viewBox="0 0 20 18"
-                fill="none"
-                stroke="currentColor"
-              >
-                <use xlink:href="#icon_cart"></use>
-              </svg>
-            </div>
+            <a href="cart.html">
+              <div class="header__icon-cart">
+                <svg
+                  width="20"
+                  height="18"
+                  viewBox="0 0 20 18"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <use xlink:href="#icon_cart"></use>
+                </svg>
+              </div>
+            </a>
 
             <ul class="header__list">
               <li class="header__item">
-                <a href="login.html" class="open-modal-login">Login</a>
+                <a href="modal-login.html" class="open-modal-login">Login</a>
               </li>
               <li class="header__item">
                 <a href="cart.html">Cart <span>0</span> </a>

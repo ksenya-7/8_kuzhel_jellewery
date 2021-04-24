@@ -73,6 +73,19 @@
   align-items: center;
 
   padding: 22px 25px 22px;
+  transition: opacity $transition-base;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+
+    p,
+    .cards__toggle {
+      outline: none;
+      cursor: pointer;
+    }
+  }
 }
 
 .cards__name p {
@@ -94,6 +107,12 @@
 
   border: none;
   background-color: $color-transparent;
+  transition: opacity $transition-base;
+
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
 
   @include viewport--sm {
     margin-top: 5px;
@@ -106,12 +125,6 @@
     right: -25px;
     width: 250px;
     height: 68px;
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-    cursor: pointer;
   }
 
   .cards__btn-close {
@@ -203,28 +216,19 @@
     height: 15px;
 
     border: 1px solid $color-logo;
-    // background-color: $color-logo;
 
     @include viewport--md {
       width: 18px;
       height: 18px;
     }
   }
-
-  // @include viewport--md {
-  //   min-height: 52px;
-  //   padding-left: 80px;
-
-  //   font-size: 19px;
-  //   line-height: 18px;
-  // }
 }
 
-input:checked + label::before {
+.cards__item-filter input:checked + label::before {
   background-color: $color-logo;
 }
 
-.cards__item-filter input:disabled + .cards__item-filter label {
+.cards__item-filter input:disabled + label {
   opacity: 0.5;
   pointer-events: none;
 }
@@ -232,23 +236,25 @@ input:checked + label::before {
 .cards__item-filter label:hover {
   transition: opacity $transition-base;
 
-  &::before {
+  &::before,
+  span {
     outline: none;
     cursor: pointer;
     opacity: 0.5;
   }
 }
 
-.cards__item-filter input:focus + .cards__item-filter label {
+.cards__item-filter input:focus + label {
   transition: opacity $transition-base;
 
-  &::before {
+  &::before,
+  span {
     outline: none;
     opacity: 0.5;
   }
 }
 
-.cards__item-filter input:checked:focus + .cards__item-filter label {
+.cards__item-filter input:checked:focus + label {
   &::before {
     background-color: $color-logo;
     outline: none;
@@ -438,16 +444,18 @@ input:checked + label::before {
 }
 
 .cards__pagination span {
+  @include viewport--sm {
+    display: none;
+  }
+}
+
+.cards__pagination a {
   transition: opacity $transition-base;
 
   &:hover,
   &:focus {
     outline: none;
     opacity: 0.5;
-  }
-
-  @include viewport--sm {
-    display: none;
   }
 }
 

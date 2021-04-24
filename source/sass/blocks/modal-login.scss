@@ -18,6 +18,10 @@
   background-color: $color-blog;
   box-shadow: 0 5px 32px $color-shadow;
 
+  &--window {
+    top: 0;
+  }
+
   @include viewport--md {
     top: 20px;
     width: 442px;

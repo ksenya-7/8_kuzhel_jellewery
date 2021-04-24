@@ -118,6 +118,7 @@
 
   border: none;
   background-color: $color-transparent;
+  transition: opacity $transition-base;
 
   @include viewport--sm {
     margin-top: 5px;
@@ -136,6 +137,7 @@
   &:focus {
     outline: none;
     cursor: pointer;
+    opacity: 0.5;
   }
 
   .faq__btn-close {
