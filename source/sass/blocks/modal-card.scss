@@ -1,18 +1,37 @@
-.modal-card__wrapper {
-  align-items: flex-start;
-}
-
 .modal-card {
   background-color: $color-overlay;
+
+  &--window {
+    background-color: $color-fonbasic;
+  }
+}
+
+.modal-card__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 40px;
+
+  @include viewport--sm {
+    padding: 60px 16px;
+  }
 }
 
 .modal-card__content {
+  position: relative;
   width: 502px;
   top: 300px;
   padding: 46px 35px 56px;
 
   &--window {
     top: 0;
+    box-shadow: 0 5px 32px $color-shadow;
   }
 
   @include viewport--md {
@@ -91,10 +110,6 @@
     margin-right: 15px;
   }
 }
-
-// .modal-card__picture img {
-//   flex-shrink: 0;
-// }
 
 .modal-card__name {
   display: flex;

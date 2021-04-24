@@ -20,9 +20,12 @@
       background-color: $color-logo;
 
       .header__icon-cart,
-      .header__logo,
-      .header__toggle {
+      .header__logo {
         color: $color-fonbasic;
+      }
+
+      .header__toggle {
+        display: none;
       }
 
       .header__wrapper-top {
@@ -259,7 +262,7 @@
 
 .header__item {
   display: flex;
-  margin-left: 30px;
+  margin: 0 0 10px 30px;
 }
 
 .header__toggle {

@@ -17,6 +17,7 @@
 
 .faq h2 {
   margin: 0;
+  padding: 0 400px;
 
   font-family: $font-title;
   font-weight: 700;
@@ -27,8 +28,13 @@
 
   color: $color-text;
 
+  @include viewport--lg {
+    padding: 0 100px;
+  }
+
   @include viewport--sm {
     width: 290px;
+    padding: 0 20px;
   }
 }
 
@@ -168,7 +174,7 @@
 
 .faq__answer {
   width: 527px;
-  margin: -32px auto 41px 49px;
+  margin: 0 auto 9px 49px;
 
   @include viewport--md {
     width: 530px;
@@ -189,9 +195,19 @@
 }
 
 .faq__answer p {
+  position: relative;
   margin: 0;
-  padding-top: 25px;
+  top: -31px;
+  left: 0;
   font-weight: 400;
+
+  @include viewport--md {
+    position: static;
+
+    margin: 0;
+    padding-top: 25px;
+    font-weight: 400;
+  }
 
   @include viewport--sm {
     padding-top: 15px;

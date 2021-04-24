@@ -2,10 +2,6 @@
   display: flex;
 
   width: 100%;
-
-  // @include viewport--md {
-  //   // min-height: 0;
-  // }
 }
 
 .main-nav__wrapper {
@@ -34,7 +30,6 @@
   margin: 0;
   margin-left: 13px;
   padding: 16px 0;
-  // padding-top: 10px;
   list-style: none;
 
   @include viewport--md {
@@ -47,17 +42,6 @@
   @include viewport--sm {
     margin-top: 0;
   }
-
-  // &--close {
-  //   display: none;
-  // }
-
-  // &.no-js {
-  //   @include viewport--md {
-  //     display: flex;
-  //     flex-direction: column;
-  //   }
-  // }
 }
 
 .main-nav__item {

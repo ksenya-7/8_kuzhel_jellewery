@@ -3,8 +3,20 @@
 }
 
 .modal-login__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
   align-items: flex-start;
+
+  width: 100%;
+  min-height: 100%;
   padding: 40px 16px;
+
+  @include viewport--sm {
+    padding: 60px 16px;
+  }
 }
 
 .modal-login__content {
@@ -12,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 40px;
+  top: 59px;
   width: 430px;
   padding: 188px 45px 55px;
   background-color: $color-blog;
@@ -23,13 +35,13 @@
   }
 
   @include viewport--md {
-    top: 20px;
+    top: 40px;
     width: 442px;
     padding: 188px 51px 55px;
   }
 
   @include viewport--sm {
-    top: 10px;
+    top: -10px;
     width: 270px;
     padding: 121px 15px 40px;
   }

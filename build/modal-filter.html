@@ -120,7 +120,11 @@
         </div>
       </form>
 
-      <a class="header__logo" href="main.html" aria-label="Переход на главную">
+      <a
+        class="header__logo"
+        href="main.html"
+        aria-label="transfer to main page"
+      >
         <svg width="66" height="66" viewBox="0 0 66 66" fill="currentColor">
           <use xlink:href="#logo"></use>
         </svg>
@@ -231,13 +235,10 @@
 
 
       <main>
-        <div class="container">
-          <div
-            class="modal__wrapper modal-filter__wrapper modal-filter__wrapper--window"
-          >
-            <div
-              class="modal__content modal-filter__content modal-filter__content--window"
-            >
+        <h1 class="visually-hidden">CH — filter page</h1>
+        <div class="container modal-filter">
+          <div class="modal-filter__wrapper modal-filter__wrapper--window">
+            <div class="modal-filter__content modal-filter__content--window">
               <form action="https://echo.htmlacademy.ru" method="get">
   <div class="modal-filter__filter">
     <div class="modal-filter__field-wrapper">
@@ -465,7 +466,6 @@
         <div class="footer__form">
           <h3>The good stuff in&nbsp;your inbox</h3>
           <p>News and updates from CH. No&nbsp;spam, we promise.</p>
-          <!-- класс js-invalid делает текст красным -->
           <div class="footer__field">
             <input
               id="email"
@@ -473,7 +473,6 @@
               name="email"
               placeholder="Your E-mail"
               aria-label="field for E-mail"
-              autocomplete="off"
               required
             />
 
@@ -535,7 +534,7 @@
 
         <ul class="footer__list footer__list--mobile">
           <li class="footer__item footer__item--mobile">
-            <a href="#" aria-label="ссылка на Facebook">
+            <a href="#" aria-label="link for Facebook">
               <svg width="8" height="15" viewBox="0 0 8 15" fill="#ffffff">
                 <use xlink:href="#icon_facebook"></use>
               </svg>
@@ -544,7 +543,7 @@
           </li>
 
           <li class="footer__item footer__item--mobile">
-            <a href="#" aria-label="ссылка на Instagram">
+            <a href="#" aria-label="link for Instagram">
               <svg width="15" height="15" viewBox="0 0 15 15" fill="#ffffff">
                 <use xlink:href="#icon_instagram"></use>
               </svg>
@@ -553,7 +552,7 @@
           </li>
 
           <li class="footer__item footer__item--mobile">
-            <a href="#" aria-label="ссылка на Pinterest">
+            <a href="#" aria-label="link for Pinterest">
               <svg width="16" height="15" viewBox="0 0 16 15" fill="#ffffff">
                 <use xlink:href="#icon_pinterest"></use>
               </svg>
@@ -562,7 +561,7 @@
           </li>
 
           <li class="footer__item footer__item--mobile">
-            <a href="#" aria-label="ссылка на Twitter">
+            <a href="#" aria-label="link for Twitter">
               <svg width="15" height="13" viewBox="0 0 15 13" fill="#ffffff">
                 <use xlink:href="#icon_twitter"></use>
               </svg>

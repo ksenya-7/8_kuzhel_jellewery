@@ -201,12 +201,10 @@
   }
 
   @include viewport--md {
-    // width: 324px;
     height: 340px;
   }
 
   @include viewport--sm {
-    // width: 130px;
     height: 136px;
   }
 }

@@ -277,22 +277,27 @@ var modalCard = document.querySelector('.modal-card');
 var modalCardButtons = document.querySelectorAll('.open-modal-card');
 var modalLogin = document.querySelector('.modal-login');
 var modalLoginButtons = document.querySelectorAll('.open-modal-login');
-var textInput = document.querySelector('.modal-login__content input[type="email"]');
+var emailInput = document.querySelector('.modal-login__content input[type="email"]');
+var isStorageSupport = true;
+var storageEmailUser = '';
 
 var focusTextInput = function focusTextInput() {
-  if (textInput) {
+  if (emailInput) {
     setTimeout(function () {
-      textInput.focus();
+      emailInput.focus();
+      storageEmailUser = localStorage.setItem('user-email', emailInput.value);
+
+      try {
+        storageEmailUser = localStorage.getItem('user-email');
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      if (isStorageSupport) {
+        storageEmailUser = localStorage.getItem('user-email');
+        emailInput.value = storageEmailUser;
+      }
     }, 100);
-  }
-};
-
-var onEnterPress = function onEnterPress(evt, modal, callback) {
-  var isEnterKey = evt.key === 'Enter' || evt.key === '13';
-
-  if (isEnterKey && modal.classList.contains('modal--active')) {
-    evt.preventDefault();
-    closeModal(modal, callback);
   }
 };
 

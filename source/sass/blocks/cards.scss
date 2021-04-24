@@ -342,7 +342,7 @@
 
   @include viewport--sm {
     width: calc((100% - 30px) / 2);
-    margin-bottom: 27px;
+    margin-bottom: 28px;
   }
 }
 
@@ -388,14 +388,18 @@
     height: auto;
   }
 
-  @include viewport--sm {
-    min-height: 136px;
-  }
+  // @include viewport--sm {
+  //   min-height: 136px;
+  // }
 }
 
 .cards__photo img {
   width: 100%;
   height: 100%;
+
+  @include viewport--sm {
+    height: 136px;
+  }
 }
 
 .cards__item dl {
@@ -406,6 +410,10 @@
   width: 100%;
   margin: 0;
   margin-top: 17px;
+
+  @include viewport--sm {
+    margin-top: 16px;
+  }
 }
 
 .cards__item dt,
@@ -455,7 +463,7 @@
   &:hover,
   &:focus {
     outline: none;
-    opacity: 0.5;
+    opacity: 0.3;
   }
 }
 
@@ -483,12 +491,6 @@
 
   @include viewport--sm {
     margin-right: 23px;
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-    opacity: 1;
   }
 }
 

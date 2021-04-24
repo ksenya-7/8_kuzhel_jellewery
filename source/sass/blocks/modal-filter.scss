@@ -1,18 +1,24 @@
 .modal-filter__wrapper {
   justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
 
-  padding: 0;
+  padding: 40px 0;
 
   &--window {
+    position: relative;
+
+    display: flex;
+    flex-shrink: 0;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
     padding: 50px 0;
   }
 
   @include viewport--sm {
     justify-content: center;
     align-items: center;
+    padding: 60px 16px;
 
     &--window {
       align-items: flex-start;
@@ -26,15 +32,18 @@
 }
 
 .modal-filter__content {
+  position: relative;
+  top: -40px;
+
   width: 478px;
   padding: 27px 18px 27px 20px;
 
   &--window {
-    border: 1px solid $color-logo;
     padding: 0 18px 27px 20px;
   }
 
   @include viewport--sm {
+    top: -85px;
     width: 290px;
     padding: 76px 10px 27px 10px;
 
@@ -266,7 +275,6 @@
   }
 }
 
-
 .modal-filter__item label:hover {
   transition: opacity $transition-base;
 
@@ -285,16 +293,6 @@
 .modal-filter__item input:disabled + label {
   opacity: 0.5;
   pointer-events: none;
-}
-
-.modal-filter__item label:hover {
-  transition: opacity $transition-base;
-
-  &::before {
-    outline: none;
-    cursor: pointer;
-    opacity: 0.5;
-  }
 }
 
 .modal-filter__item input:focus + label {

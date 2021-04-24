@@ -8,22 +8,27 @@ const modalCardButtons = document.querySelectorAll('.open-modal-card');
 
 const modalLogin = document.querySelector('.modal-login');
 const modalLoginButtons = document.querySelectorAll('.open-modal-login');
-const textInput = document.querySelector('.modal-login__content input[type="email"]');
+const emailInput = document.querySelector('.modal-login__content input[type="email"]');
+let isStorageSupport = true;
+let storageEmailUser = '';
+
 
 const focusTextInput = () => {
-  if (textInput) {
+  if (emailInput) {
     setTimeout(() => {
-      textInput.focus();
+      emailInput.focus();
+
+      storageEmailUser = localStorage.setItem('user-email', emailInput.value);
+      try {
+        storageEmailUser = localStorage.getItem('user-email');
+      } catch (err) {
+        isStorageSupport = false;
+      }
+      if (isStorageSupport) {
+        storageEmailUser = localStorage.getItem('user-email');
+        emailInput.value = storageEmailUser;
+      }
     }, 100);
-  }
-};
-
-const onEnterPress = (evt, modal, callback) => {
-  const isEnterKey = evt.key === 'Enter' || evt.key === '13';
-
-  if (isEnterKey && modal.classList.contains('modal--active')) {
-    evt.preventDefault();
-    closeModal(modal, callback);
   }
 };
 
