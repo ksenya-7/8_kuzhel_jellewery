@@ -26,30 +26,30 @@
 .modal-card__content {
   position: relative;
   width: 502px;
-  top: 300px;
+  margin-top: 300px;
   padding: 46px 35px 56px;
 
   &--window {
-    top: 0;
+    margin-top: 0;
     box-shadow: 0 5px 32px $color-shadow;
   }
 
   @include viewport--md {
-    top: 198px;
+    margin-top: 198px;
     padding: 46px 29px 56px;
 
     &--window {
-      top: 0;
+      margin-top: 0;
     }
   }
 
   @include viewport--sm {
-    top: 57px;
+    margin-top: 57px;
     width: 290px;
     padding: 39px 15px 42px;
 
     &--window {
-      top: 0;
+      margin-top: 0;
     }
   }
 }

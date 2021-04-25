@@ -24,24 +24,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 59px;
+  margin-top: 59px;
   width: 430px;
   padding: 188px 45px 55px;
   background-color: $color-blog;
   box-shadow: 0 5px 32px $color-shadow;
 
   &--window {
-    top: 0;
+    margin-top: 0;
   }
 
   @include viewport--md {
-    top: 40px;
+    margin-top: 40px;
     width: 442px;
     padding: 188px 51px 55px;
   }
 
   @include viewport--sm {
-    top: -10px;
+    margin-top: -10px;
     width: 270px;
     padding: 121px 15px 40px;
   }

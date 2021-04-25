@@ -33,7 +33,7 @@
 
 .modal-filter__content {
   position: relative;
-  top: -40px;
+  margin-top: -40px;
 
   width: 478px;
   padding: 27px 18px 27px 20px;
@@ -43,7 +43,7 @@
   }
 
   @include viewport--sm {
-    top: -85px;
+    margin-top: -60px;
     width: 290px;
     padding: 76px 10px 27px 10px;
 
