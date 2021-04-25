@@ -398,7 +398,7 @@
   height: 100%;
 
   @include viewport--sm {
-    height: 136px;
+    min-height: 136px;
   }
 }
 

@@ -3251,7 +3251,7 @@ a.main-nav__login {
   height: 100%; }
   @media (max-width: 767px) {
     .cards__photo img {
-      height: 136px; } }
+      min-height: 136px; } }
 
 .cards__item dl {
   display: -webkit-box;
