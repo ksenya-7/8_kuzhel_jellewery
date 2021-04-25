@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @@include("source/html/base/head.html")
+    <title>Список страниц</title>
+
+    <style>
+      .container {
+        padding: 50px 30px;
+      }
+
+      h1 {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      a {
+        color: rgb(10, 10, 175);
+      }
+
+      li {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 7px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 768px) {
+        ol {
+          padding-left: 20px;
+        }
+
+        ol li {
+          margin-bottom: 15px;
+        }
+
+        .container {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: none">@@include("build/img/sprite_auto.svg")</div>
+    <main>
+      <div class="container">
+        <a class="header__logo header__logo--main">
+          <svg
+            width="66"
+            height="66"
+            viewBox="0 0 66 66"
+            fill="#A87B62"
+            stroke="#A87B62"
+          >
+            <use xlink:href="#logo"></use>
+          </svg>
+        </a>
+        <h1>Список страниц</h1>
+        <ol>
+          <li>
+            <a href="main.html">Главная — main.html</a>
+          </li>
+          <li>
+            <a href="catalog.html">Каталог — catalog.html</a>
+          </li>
+          <li>
+            <a href="card.html">Карточка товара — card.html</a>
+          </li>
+          <li>
+            <a href="modal-card.html"
+              >Страница модального окна карточки товара при отключенном js —
+              modal-card.html</a
+            >
+          </li>
+          <li>
+            <a href="modal-filter.html"
+              >Страница модального окна фильтра при отключенном js —
+              modal-filter.html</a
+            >
+          </li>
+          <li>
+            <a href="modal-login.html"
+              >Страница модального окна формы "Log in" при отключенном js —
+              modal-login.html</a
+            >
+          </li>
+        </ol>
+      </div>
+    </main>
+  </body>
+</html>
