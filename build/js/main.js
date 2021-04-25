@@ -162,6 +162,12 @@ var toggleBlock = function toggleBlock(block, toggle) {
   toggle.classList.toggle('active');
 };
 
+var toggleHeight = function toggleHeight(block, btn) {
+  var maxHeight = block.style.maxHeight;
+  block.style.maxHeight = maxHeight ? null : block.scrollHeight + 'px';
+  toggleBlock(block, btn);
+};
+
 var initAccordionFaq = function initAccordionFaq() {
   closeLists(blocksAnswer);
   deactivateToggles(togglesQuestion);
@@ -175,9 +181,7 @@ var initAccordionFaq = function initAccordionFaq() {
       } else {
         closeLists(blocksAnswer);
         deactivateToggles(togglesQuestion);
-        var maxHeight = blocksAnswer[index].style.maxHeight;
-        blocksAnswer[index].style.maxHeight = maxHeight ? null : blocksAnswer[index].scrollHeight + 'px';
-        toggleBlock(blocksAnswer[index], btn);
+        toggleHeight(blocksAnswer[index], btn);
       }
     });
   });
@@ -190,9 +194,7 @@ var initAccordionFilter = function initAccordionFilter() {
     btn.classList.remove('no-js');
     btn.addEventListener('click', function (evt) {
       evt.preventDefault();
-      var maxHeight = blocksFilter[index].style.maxHeight;
-      blocksFilter[index].style.maxHeight = maxHeight ? null : blocksFilter[index].scrollHeight + 'px';
-      toggleBlock(blocksFilter[index], btn);
+      toggleHeight(blocksFilter[index], btn);
     });
   });
 };
@@ -204,9 +206,7 @@ var initAccordionModalFilter = function initAccordionModalFilter() {
     btn.classList.remove('no-js');
     btn.addEventListener('click', function (evt) {
       evt.preventDefault();
-      var maxHeight = blocksModalFilter[index].style.maxHeight;
-      blocksModalFilter[index].style.maxHeight = maxHeight ? null : blocksModalFilter[index].scrollHeight + 'px';
-      toggleBlock(blocksModalFilter[index], btn);
+      toggleHeight(blocksModalFilter[index], btn);
     });
   });
 };
@@ -821,12 +821,19 @@ var onEscPress = function onEscPress(evt, modal, callback) {
 var setModalListeners = function setModalListeners(modal, closeCallback, preventScrollLock) {
   var overlay = modal.querySelector('.modal__overlay');
   var closeBtn = modal.querySelector('.modal__close-btn');
-  closeBtn.addEventListener('click', function () {
-    closeModal(modal, closeCallback, preventScrollLock);
-  });
-  overlay.addEventListener('click', function () {
-    closeModal(modal, closeCallback, preventScrollLock);
-  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      closeModal(modal, closeCallback, preventScrollLock);
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', function () {
+      closeModal(modal, closeCallback, preventScrollLock);
+    });
+  }
+
   document.addEventListener('keydown', function (evt) {
     onEscPress(evt, modal, closeCallback, preventScrollLock);
   });

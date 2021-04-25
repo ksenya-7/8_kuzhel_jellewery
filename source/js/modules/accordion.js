@@ -24,6 +24,12 @@ const toggleBlock = (block, toggle) => {
   toggle.classList.toggle('active');
 };
 
+const toggleHeight = (block, btn) => {
+  const maxHeight = block.style.maxHeight;
+  block.style.maxHeight = (maxHeight) ? null : block.scrollHeight + 'px';
+  toggleBlock(block, btn);
+};
+
 const initAccordionFaq = () => {
   closeLists(blocksAnswer);
   deactivateToggles(togglesQuestion);
@@ -37,9 +43,7 @@ const initAccordionFaq = () => {
       } else {
         closeLists(blocksAnswer);
         deactivateToggles(togglesQuestion);
-        const maxHeight = blocksAnswer[index].style.maxHeight;
-        blocksAnswer[index].style.maxHeight = (maxHeight) ? null : blocksAnswer[index].scrollHeight + 'px';
-        toggleBlock(blocksAnswer[index], btn);
+        toggleHeight(blocksAnswer[index], btn);
       }
     });
   });
@@ -53,9 +57,7 @@ const initAccordionFilter = () => {
 
     btn.addEventListener('click', (evt) => {
       evt.preventDefault();
-      const maxHeight = blocksFilter[index].style.maxHeight;
-      blocksFilter[index].style.maxHeight = (maxHeight) ? null : blocksFilter[index].scrollHeight + 'px';
-      toggleBlock(blocksFilter[index], btn);
+      toggleHeight(blocksFilter[index], btn);
     });
   });
 };
@@ -68,9 +70,7 @@ const initAccordionModalFilter = () => {
 
     btn.addEventListener('click', (evt) => {
       evt.preventDefault();
-      const maxHeight = blocksModalFilter[index].style.maxHeight;
-      blocksModalFilter[index].style.maxHeight = (maxHeight) ? null : blocksModalFilter[index].scrollHeight + 'px';
-      toggleBlock(blocksModalFilter[index], btn);
+      toggleHeight(blocksModalFilter[index], btn);
     });
   });
 };
