@@ -2621,6 +2621,8 @@ a.main-nav__login {
           -ms-flex-align: start;
               align-items: flex-start;
       width: 100%; } }
+  .faq__question:focus-within, .faq__question:hover {
+    opacity: 0.5; }
 
 .faq__question p {
   margin: 0;
@@ -2632,8 +2634,6 @@ a.main-nav__login {
       max-width: 89%;
       font-size: 16px;
       line-height: 22px; } }
-  .faq__question p:hover, .faq__question p:focus-within {
-    opacity: 0.5; }
 
 .faq__toggle {
   display: -webkit-box;
