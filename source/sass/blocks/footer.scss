@@ -124,6 +124,19 @@
   @include viewport--sm {
     margin-top: 34px;
   }
+
+  &:hover,
+  &:focus-within {
+    border-bottom: 1px solid $color-tint50;
+
+    input::-webkit-input-placeholder {
+      opacity: 0.5;
+    }
+
+    input:-moz-placeholder {
+      opacity: 0.5;
+    }
+  }
 }
 
 .footer__field input {
@@ -131,7 +144,7 @@
 
   margin-right: 27px;
 
-  color: $color-optional;
+  color: $color-fonbasic;
   background-color: $color-transparent;
   border: none;
 
@@ -146,7 +159,6 @@
   &:hover,
   &:focus {
     outline: none;
-    opacity: 0.5;
   }
 }
 

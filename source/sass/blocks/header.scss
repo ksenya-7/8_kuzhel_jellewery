@@ -172,7 +172,13 @@
 
   &:hover,
   &:focus-within {
-    opacity: 0.5;
+    input::-webkit-input-placeholder {
+      opacity: 0.5;
+    }
+
+    input:-moz-placeholder {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -193,12 +199,17 @@
 }
 
 .header__form input {
-  color: $color-optional;
+  color: $color-text;
   background-color: $color-transparent;
   border: none;
 
   font-size: 14px;
   padding: 10px;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
 }
 
 .header .header__logo {
@@ -261,6 +272,7 @@
 
 .header__item {
   display: flex;
+  align-items: flex-start;
   margin: 0 0 10px 30px;
 }
 

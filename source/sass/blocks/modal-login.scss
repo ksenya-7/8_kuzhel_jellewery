@@ -127,11 +127,20 @@
   &:hover,
   &:focus {
     outline: none;
-    opacity: 0.5;
+    border-bottom: 1px solid $color-optional;
+
+    &::-webkit-input-placeholder {
+      color: $color-overlay;
+    }
+
+    &:-moz-placeholder:hover {
+      color: $color-overlay;
+    }
   }
 }
 
 .modal-login__forgot {
+  align-self: flex-end;
   margin: 0;
   margin-top: -35px;
 

@@ -99,7 +99,7 @@
   }
 
   @include viewport--sm {
-    width: 290px;
+    width: 90.62%;
     margin-top: 40px;
   }
 }
@@ -117,8 +117,9 @@
   }
 
   @include viewport--sm {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template:
+      "a"
+      "b"/1fr;
 
     margin-top: 10px;
   }
@@ -176,7 +177,9 @@
   }
 
   @include viewport--sm {
+    grid-area: b;
     padding: 44px 59px 15px;
+    min-height: 256px;
   }
 }
 
@@ -228,11 +231,11 @@
 
   @include viewport--sm {
     order: -1;
-    height: 256px;
   }
 }
 
 .blog__photo img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }

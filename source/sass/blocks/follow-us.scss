@@ -85,12 +85,10 @@
   }
 
   @include viewport--sm {
-    grid-template:
-      "a b"
-      /130px 145px;
-    gap: 15px;
+    display: flex;
+    gap: 0;
 
-    width: 290px;
+    width: 90.62%;
     margin-top: 30px;
   }
 }
@@ -100,10 +98,43 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  @include viewport--sm {
-    flex-direction: column;
-    min-height: 362px;
+  &--left {
+    @include viewport--sm {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 45%;
+      margin-right: 5%;
+
+      img {
+        flex-grow: 1;
+      }
+    }
   }
+
+  &--right {
+    @include viewport--sm {
+      width: 50%;
+    }
+  }
+}
+
+.follow-us__photo--1 {
+  @include viewport--sm {
+    margin: auto 0;
+  }
+}
+
+.follow-us__photo--10 {
+  @include viewport--sm {
+    margin-bottom: 15px;
+  }
+}
+
+.follow-us__photo img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .follow-us__photo--4,
@@ -128,6 +159,10 @@
 .follow-us__photo--5,
 .follow-us__photo--7 {
   align-self: flex-end;
+
+  @include viewport--sm {
+    align-self: stretch;
+  }
 }
 
 .follow-us__photo--9,
@@ -136,6 +171,15 @@
 
   @include viewport--sm {
     display: block;
+    width: 100%;
+  }
+}
+
+.follow-us__photo--10 img {
+
+  @include viewport--sm {
+    width: 100%;
+    height: 100%;
   }
 }
 

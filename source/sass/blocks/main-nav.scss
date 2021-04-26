@@ -25,10 +25,10 @@
   display: flex;
   flex-wrap: wrap;
 
-  width: 495px;
+  width: 530px;
   min-height: 60px;
   margin: 0;
-  margin-left: 13px;
+  margin-left: -22px;
   padding: 16px 0;
   list-style: none;
 
@@ -45,7 +45,7 @@
 }
 
 .main-nav__item {
-  margin-right: 35px;
+  margin-left: 35px;
 
   @include viewport--md {
     margin-top: 21px;
@@ -60,9 +60,9 @@
   }
 }
 
-.main-nav__item:last-child {
-  margin-right: 0;
-}
+// .main-nav__item:nth-child(5n) {
+//   margin-right: 0;
+// }
 
 .main-nav__wrapper form {
   display: none;

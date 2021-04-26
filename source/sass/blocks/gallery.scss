@@ -24,7 +24,7 @@
 
   @include viewport--sm {
     flex-direction: column;
-    width: 290px;
+    width: 90.62%;
     margin: 0 auto;
   }
 }
@@ -114,7 +114,7 @@
 
   @include viewport--sm {
     width: 291px;
-    height: 260px;
+    height: auto;
     margin-right: -14px;
   }
 
@@ -200,7 +200,8 @@
   }
 
   @include viewport--md {
-    width: 47%;
+    width: 60%;
+    margin: 0 auto;
   }
 
   @include viewport--sm {
