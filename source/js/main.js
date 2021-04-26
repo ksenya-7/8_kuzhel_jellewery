@@ -4,6 +4,7 @@ import {initModalFilter, initModalCard, initModalLogin} from './modules/init-mod
 import {initMenu} from './modules/init-menu';
 import {initAccordionFaq, initAccordionFilter, initAccordionModalFilter} from './modules/accordion';
 import {slider, sliderCard} from './modules/slider';
+import {sliderRange, sliderRangeCatalog, sliderRangeModal} from './modules/init-nouislider';
 
 // Utils
 // ---------------------------------
@@ -23,3 +24,6 @@ initAccordionFilter();
 initAccordionModalFilter();
 slider();
 sliderCard();
+sliderRange();
+sliderRangeCatalog();
+sliderRangeModal();

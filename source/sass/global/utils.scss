@@ -15,12 +15,10 @@
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
-  // min-height: calc(100 * var(--vh, 1vh));
   overflow-x: hidden;
 
   &--no-scrollbar {
     height: 100vh;
-    // height: calc(100 * var(--vh, 1vh));
 
     -ms-overflow-style: none;
     scrollbar-width: none;

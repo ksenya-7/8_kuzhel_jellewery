@@ -101,6 +101,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_init_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/init-menu */ "./js/modules/init-menu.js");
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./js/modules/accordion.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
+/* harmony import */ var _modules_init_nouislider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/init-nouislider */ "./js/modules/init-nouislider.js");
+
 
 
 
@@ -122,6 +124,9 @@ Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionFilter"])()
 Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["initAccordionModalFilter"])();
 Object(_modules_slider__WEBPACK_IMPORTED_MODULE_5__["slider"])();
 Object(_modules_slider__WEBPACK_IMPORTED_MODULE_5__["sliderCard"])();
+Object(_modules_init_nouislider__WEBPACK_IMPORTED_MODULE_6__["sliderRange"])();
+Object(_modules_init_nouislider__WEBPACK_IMPORTED_MODULE_6__["sliderRangeCatalog"])();
+Object(_modules_init_nouislider__WEBPACK_IMPORTED_MODULE_6__["sliderRangeModal"])();
 
 /***/ }),
 
@@ -330,6 +335,88 @@ var initModalCard = function initModalCard() {
         });
       });
     }
+  }
+};
+
+
+
+/***/ }),
+
+/***/ "./js/modules/init-nouislider.js":
+/*!***************************************!*\
+  !*** ./js/modules/init-nouislider.js ***!
+  \***************************************/
+/*! exports provided: sliderRange, sliderRangeCatalog, sliderRangeModal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderRange", function() { return sliderRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderRangeCatalog", function() { return sliderRangeCatalog; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderRangeModal", function() { return sliderRangeModal; });
+var slider = document.querySelector('.nouislider');
+var sliderCatalog = document.querySelector('.nouislider-catalog');
+var sliderModal = document.querySelector('.nouislider-modal'); // eslint-disable-next-line consistent-return
+
+var sliderRange = function sliderRange() {
+  if (slider) {
+    // eslint-disable-next-line no-undef
+    return noUiSlider.create(slider, {
+      connect: true,
+      tooltips: true,
+      start: [55, 155],
+      step: 5,
+      range: {
+        'min': [0],
+        'max': [200]
+      },
+      // eslint-disable-next-line no-undef
+      format: wNumb({
+        prefix: '$ '
+      })
+    });
+  }
+}; // eslint-disable-next-line consistent-return
+
+
+var sliderRangeCatalog = function sliderRangeCatalog() {
+  if (sliderCatalog) {
+    // eslint-disable-next-line no-undef
+    return noUiSlider.create(sliderCatalog, {
+      connect: true,
+      tooltips: true,
+      start: [55, 155],
+      step: 5,
+      range: {
+        'min': [0],
+        'max': [200]
+      },
+      // eslint-disable-next-line no-undef
+      format: wNumb({
+        prefix: '$ '
+      })
+    });
+  }
+}; // eslint-disable-next-line consistent-return
+
+
+var sliderRangeModal = function sliderRangeModal() {
+  if (sliderModal) {
+    // eslint-disable-next-line no-undef
+    return noUiSlider.create(sliderModal, {
+      connect: true,
+      tooltips: true,
+      start: [55, 155],
+      step: 5,
+      range: {
+        'min': [0],
+        'max': [200]
+      },
+      // eslint-disable-next-line no-undef
+      format: wNumb({
+        prefix: '$ '
+      })
+    });
   }
 };
 

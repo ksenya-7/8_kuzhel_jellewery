@@ -3,6 +3,7 @@
 
 @import "vendor/normalize";
 @import "vendor/swiper";
+@import "vendor/nouislider";
 
 // Global
 //---------------------------------
@@ -33,3 +34,4 @@
 @import "blocks/modal-card";
 @import "blocks/gallery";
 @import "blocks/modal-login";
+@import "blocks/no-ui-slider";

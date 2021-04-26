@@ -1,0 +1,114 @@
+.noUi-target {
+  width: 304px;
+  height: 1px;
+  border: none;
+  box-shadow: none;
+}
+
+.cards__options--price .noUi-target {
+  width: 200px;
+}
+
+.cards__options--price .noUi-connects {
+  margin-left: 25px;
+}
+
+.noUi-connects {
+  background-color: $color-blog;
+}
+
+.noUi-connect {
+  background-color: $color-logo;
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+  display: none;
+}
+
+.noUi-handle {
+  background-color: rgb(168, 123, 98);
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 15px;
+  height: 15px;
+  top: -7px;
+}
+
+.cards__options--price .noUi-handle {
+  width: 15px;
+  height: 15px;
+  left: 35px;
+  top: -6px;
+}
+
+.cards__options--price .noUi-handle-upper {
+  left: 38px;
+}
+
+.modal-filter__options--price .noUi-target {
+  @include viewport--sm {
+    width: 250px;
+    margin-top: 18px;
+  }
+}
+
+.modal-filter__options--price .noUi-handle {
+  width: 18px;
+  height: 18px;
+  left: -19px;
+  top: -6px;
+
+  @include viewport--sm {
+    top: -8px;
+    left: -6px;
+  }
+}
+
+.modal-filter__options--price .noUi-handle-upper {
+  left: 5px;
+
+  @include viewport--sm {
+    top: -8px;
+    left: 7px;
+  }
+}
+
+.modal-filter__options--price .noUi-base {
+  left: 50px;
+
+  @include viewport--sm {
+    left: 12px;
+  }
+}
+
+.modal-filter__options--price .noUi-connect {
+  right: 9px;
+  width: 352px;
+
+  @include viewport--sm {
+    right: -11px;
+    width: 306px;
+  }
+}
+
+.noUi-tooltip {
+  display: block;
+  position: absolute;
+  border: none;
+  color: $color-text;
+  background-color: $color-transparent;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.noUi-horizontal .noUi-tooltip {
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -209%;
+}

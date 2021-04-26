@@ -171,8 +171,7 @@
   transition: opacity $transition-base;
 
   &:hover,
-  &:focus {
-    outline: none;
+  &:focus-within {
     opacity: 0.5;
   }
 }

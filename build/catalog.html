@@ -130,26 +130,35 @@
         </svg>
       </a>
 
-      <a href="cart.html">
-        <div class="header__icon-cart">
-          <svg
-            width="20"
-            height="18"
-            viewBox="0 0 20 18"
-            fill="none"
-            stroke="currentColor"
-          >
-            <use xlink:href="#icon_cart"></use>
-          </svg>
-        </div>
+      <a
+        href="cart.html"
+        class="header__icon-cart"
+        aria-label="transfer to cart page"
+      >
+        <svg
+          width="20"
+          height="18"
+          viewBox="0 0 20 18"
+          fill="none"
+          stroke="currentColor"
+        >
+          <use xlink:href="#icon_cart"></use>
+        </svg>
       </a>
 
       <ul class="header__list">
         <li class="header__item">
-          <a href="modal-login.html" class="open-modal-login">Login</a>
+          <a
+            href="modal-login.html"
+            class="open-modal-login"
+            aria-label="transfer to login page"
+            >Login</a
+          >
         </li>
         <li class="header__item">
-          <a href="cart.html">Cart <span>0</span> </a>
+          <a href="cart.html" aria-label="transfer to cart page">
+            Cart <span>0</span>
+          </a>
         </li>
       </ul>
 
@@ -226,7 +235,13 @@
             </li>
           </ul>
 
-          <a class="main-nav__login" href="#">Login</a>
+          <a
+            class="main-nav__login open-modal-login"
+            href="modal-login.html"
+            aria-label="transfer to login page"
+          >
+            Login
+          </a>
         </div>
       </nav>
     </div>
@@ -248,34 +263,58 @@
               </p>
             </div>
             <div class="intro-catalog__photo intro-catalog__photo--desktop">
-              <!-- 1х: 1366px; 2x: 2732px -->
-              <img
-                width="1366"
-                height="261"
-                src="img/content/catalog_intro-desktop@1x.jpg"
-                srcset="img/content/catalog_intro-desktop@2x.jpg 2x"
-                alt="background of intro-catalog"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 1920px)"
+                  srcset="
+                    img/content/catalog_intro-desktop@1x.webp 1x,
+                    img/content/catalog_intro-desktop@2x.webp 2x
+                  " />
+                <!-- 1х: 1366px; 2x: 2732px -->
+                <img
+                  width="1366"
+                  height="261"
+                  src="img/content/catalog_intro-desktop@1x.jpg"
+                  srcset="img/content/catalog_intro-desktop@2x.jpg 2x"
+                  alt="background of intro-catalog"
+              /></picture>
             </div>
             <div class="intro-catalog__photo intro-catalog__photo--tablet">
-              <!-- 1х: 768px; 2x: 1536px -->
-              <img
-                width="768"
-                height="261"
-                src="img/content/catalog_intro-tablet@1x.jpg"
-                srcset="img/content/catalog_intro-tablet@2x.jpg 2x"
-                alt="background of intro-catalog"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 1023px)"
+                  srcset="
+                    img/content/catalog_intro-tablet@1x.webp 1x,
+                    img/content/catalog_intro-tablet@2x.webp 2x
+                  " />
+                <!-- 1х: 768px; 2x: 1536px -->
+                <img
+                  width="768"
+                  height="261"
+                  src="img/content/catalog_intro-tablet@1x.jpg"
+                  srcset="img/content/catalog_intro-tablet@2x.jpg 2x"
+                  alt="background of intro-catalog"
+              /></picture>
             </div>
             <div class="intro-catalog__photo intro-catalog__photo--mobile">
-              <!-- 1х: 320px; 2x: 640px -->
-              <img
-                width="320"
-                height="261"
-                src="img/content/catalog_intro-mobile@1x.jpg"
-                srcset="img/content/catalog_intro-mobile@2x.jpg 2x"
-                alt="background of intro-catalog"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/content/catalog_intro-mobile@1x.webp 1x,
+                    img/content/catalog_intro-mobile@2x.webp 2x
+                  " />
+                <!-- 1х: 320px; 2x: 640px -->
+                <img
+                  width="320"
+                  height="261"
+                  src="img/content/catalog_intro-mobile@1x.jpg"
+                  srcset="img/content/catalog_intro-mobile@2x.jpg 2x"
+                  alt="background of intro-catalog"
+              /></picture>
             </div>
           </section>
 
@@ -523,10 +562,7 @@
                       </button>
                     </div>
                     <div class="cards__options cards__options--price">
-                      <div class="cards__price-choice"></div>
-                      <div class="cards__handle"></div>
-                      <span class="cards__price-min">$ 55</span>
-                      <span class="cards__price-max">$ 155</span>
+                      <div class="nouislider-catalog"></div>
                     </div>
                   </div>
                 </div>
@@ -556,16 +592,26 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/double-pearl-earrings_desktop@1x.jpg"
-                        srcset="
-                          img/slides/double-pearl-earrings_desktop@2x.jpg 2x
-                        "
-                        alt="double-pearl-earrings"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/double-pearl-earrings_desktop@1x.webp 1x,
+                            img/slides/double-pearl-earrings_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/double-pearl-earrings_desktop@1x.jpg"
+                          srcset="
+                            img/slides/double-pearl-earrings_desktop@2x.jpg 2x
+                          "
+                          alt="double-pearl-earrings"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -577,16 +623,26 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/black-choker-gold-bead_desktop@1x.jpg"
-                        srcset="
-                          img/slides/black-choker-gold-bead_desktop@2x.jpg 2x
-                        "
-                        alt="black-choker-gold-bead"
-                      /></div
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/black-choker-gold-bead_desktop@1x.webp 1x,
+                            img/slides/black-choker-gold-bead_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/black-choker-gold-bead_desktop@1x.jpg"
+                          srcset="
+                            img/slides/black-choker-gold-bead_desktop@2x.jpg 2x
+                          "
+                          alt="black-choker-gold-bead"
+                        />
+                      </picture></div
                   ></a>
                 </li>
                 <li class="cards__item">
@@ -597,16 +653,26 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/gold-layered-necklace_desktop@1x.jpg"
-                        srcset="
-                          img/slides/gold-layered-necklace_desktop@2x.jpg 2x
-                        "
-                        alt="gold-layered-necklace"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/gold-layered-necklace_desktop@1x.webp 1x,
+                            img/slides/gold-layered-necklace_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/gold-layered-necklace_desktop@1x.jpg"
+                          srcset="
+                            img/slides/gold-layered-necklace_desktop@2x.jpg 2x
+                          "
+                          alt="gold-layered-necklace"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -618,16 +684,26 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/blue-gemstone-pendant_desktop@1x.jpg"
-                        srcset="
-                          img/slides/blue-gemstone-pendant_desktop@2x.jpg 2x
-                        "
-                        alt="blue-gemstone-pendant"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/blue-gemstone-pendant_desktop@1x.webp 1x,
+                            img/slides/blue-gemstone-pendant_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/blue-gemstone-pendant_desktop@1x.jpg"
+                          srcset="
+                            img/slides/blue-gemstone-pendant_desktop@2x.jpg 2x
+                          "
+                          alt="blue-gemstone-pendant"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -639,14 +715,24 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/boho-earrings_desktop@1x.jpg"
-                        srcset="img/slides/boho-earrings_desktop@2x.jpg 2x"
-                        alt="boho-earrings"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/gold-layered-necklace_desktop@1x.webp 1x,
+                            img/slides/gold-layered-necklace_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/boho-earrings_desktop@1x.jpg"
+                          srcset="img/slides/boho-earrings_desktop@2x.jpg 2x"
+                          alt="boho-earrings"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -659,14 +745,24 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/bird-necklace_desktop@1x.jpg"
-                        srcset="img/slides/bird-necklace_desktop@2x.jpg 2x"
-                        alt="bird-necklace"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/bird-necklace_desktop@1x.webp 1x,
+                            img/slides/bird-necklace_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/bird-necklace_desktop@1x.jpg"
+                          srcset="img/slides/bird-necklace_desktop@2x.jpg 2x"
+                          alt="bird-necklace"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -678,16 +774,26 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/black-leather-choker-necklace_desktop@1x.jpg"
-                        srcset="
-                          img/slides/black-leather-choker-necklace_desktop@2x.jpg 2x
-                        "
-                        alt="black-leather-choker-necklace"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/black-leather-choker-necklace_desktop@1x.webp 1x,
+                            img/slides/black-leather-choker-necklace_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/black-leather-choker-necklace_desktop@1x.jpg"
+                          srcset="
+                            img/slides/black-leather-choker-necklace_desktop@2x.jpg 2x
+                          "
+                          alt="black-leather-choker-necklace"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -700,16 +806,26 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/purple-gemstone-necklace_desktop@1x.jpg"
-                        srcset="
-                          img/slides/purple-gemstone-necklace_desktop@2x.jpg 2x
-                        "
-                        alt="purple-gemstone-necklace"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/purple-gemstone-necklace_desktop@1x.webp 1x,
+                            img/slides/purple-gemstone-necklace_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/purple-gemstone-necklace_desktop@1x.jpg"
+                          srcset="
+                            img/slides/purple-gemstone-necklace_desktop@2x.jpg 2x
+                          "
+                          alt="purple-gemstone-necklace"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -722,14 +838,26 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/elephant-earrings_desktop@1x.jpg"
-                        srcset="img/slides/elephant-earrings_desktop@2x.jpg 2x"
-                        alt="elephant-earrings"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/elephant-earrings_desktop@1x.webp 1x,
+                            img/slides/elephant-earrings_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/elephant-earrings_desktop@1x.jpg"
+                          srcset="
+                            img/slides/elephant-earrings_desktop@2x.jpg 2x
+                          "
+                          alt="elephant-earrings"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -741,16 +869,26 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/threader-necklace-closeup_desktop@1x.jpg"
-                        srcset="
-                          img/slides/threader-necklace-closeup_desktop@2x.jpg 2x
-                        "
-                        alt="threader-necklace-closeup"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/threader-necklace-closeup_desktop@1x.webp 1x,
+                            img/slides/threader-necklace-closeup_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/threader-necklace-closeup_desktop@1x.jpg"
+                          srcset="
+                            img/slides/threader-necklace-closeup_desktop@2x.jpg 2x
+                          "
+                          alt="threader-necklace-closeup"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -762,16 +900,26 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/origami-crane-necklace_desktop@1x.jpg"
-                        srcset="
-                          img/slides/origami-crane-necklace_desktop@2x.jpg 2x
-                        "
-                        alt="origami-crane-necklace"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/origami-crane-necklace_desktop@1x.webp 1x,
+                            img/slides/origami-crane-necklace_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/origami-crane-necklace_desktop@1x.jpg"
+                          srcset="
+                            img/slides/origami-crane-necklace_desktop@2x.jpg 2x
+                          "
+                          alt="origami-crane-necklace"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -783,14 +931,24 @@
                     </dl>
 
                     <div class="cards__photo cards__photo--desktop">
-                      <!-- 1х: 270px; 2x: 540px -->
-                      <img
-                        width="270"
-                        height="284"
-                        src="img/slides/marble-earrings_desktop@1x.jpg"
-                        srcset="img/slides/marble-earrings_desktop@2x.jpg 2x"
-                        alt="marble-earrings"
-                      />
+                      <picture>
+                        <source
+                          type="image/webp"
+                          media="(max-width: 1920px)"
+                          srcset="
+                            img/slides/marble-earrings_desktop@1x.webp 1x,
+                            img/slides/marble-earrings_desktop@2x.webp 2x
+                          "
+                        />
+                        <!-- 1х: 270px; 2x: 540px -->
+                        <img
+                          width="270"
+                          height="284"
+                          src="img/slides/marble-earrings_desktop@1x.jpg"
+                          srcset="img/slides/marble-earrings_desktop@2x.jpg 2x"
+                          alt="marble-earrings"
+                        />
+                      </picture>
                     </div>
                   </a>
                 </li>
@@ -1127,10 +1285,7 @@
           </button>
         </div>
         <div class="modal-filter__options modal-filter__options--price">
-          <div class="modal-filter__price-choice"></div>
-          <div class="modal-filter__handle"></div>
-          <span class="modal-filter__price-min">$ 55</span>
-          <span class="modal-filter__price-max">$ 155</span>
+          <div class="nouislider-modal"></div>
         </div>
       </div>
     </div>
@@ -1165,14 +1320,24 @@
         <div class="modal__content modal-login__content">
           <h2>Log In</h2>
 <div class="modal-login__picture">
-  <!-- 1х: 430px; 2x: 860px -->
-  <img
-    width="430"
-    height="138"
-    src="img/content/login-desktop@1x.jpg"
-    srcset="img/content/login-desktop@2x.jpg 2x"
-    alt="photo of jewellery"
-  />
+  <picture>
+    <source
+      type="image/webp"
+      media="(max-width: 1920px)"
+      srcset="
+        img/content/login-desktop@1x.webp 1x,
+        img/content/login-desktop@2x.webp 2x
+      "
+    />
+    <!-- 1х: 430px; 2x: 860px -->
+    <img
+      width="430"
+      height="138"
+      src="img/content/login-desktop@1x.jpg"
+      srcset="img/content/login-desktop@2x.jpg 2x"
+      alt="photo of jewellery"
+    />
+  </picture>
 </div>
 <form action="https://echo.htmlacademy.ru" method="get">
   <div class="modal-login__field">

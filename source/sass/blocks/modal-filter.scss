@@ -96,20 +96,13 @@
   padding: 34px 40px;
   transition: opacity $transition-base;
 
-  &:hover,
-  &:focus {
-    outline: none;
-    opacity: 0.5;
-
-    p,
-    .modal-filter__toggle {
-      outline: none;
-      cursor: pointer;
-    }
-  }
-
   @include viewport--sm {
     padding: 24px 20px;
+  }
+
+  &:hover,
+  &:focus-within {
+    opacity: 0.5;
   }
 }
 
@@ -137,9 +130,10 @@
   background-color: $color-transparent;
   transition: opacity $transition-base;
 
+  &:hover,
   &:focus {
     outline: none;
-    opacity: 0.5;
+    cursor: pointer;
   }
 
   @include viewport--sm {
@@ -160,13 +154,6 @@
       width: 245px;
       height: 71px;
     }
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-    cursor: pointer;
-    opacity: 0.5;
   }
 
   .modal-filter__btn-close {
@@ -199,15 +186,21 @@
   }
 
   &--price {
-    padding: 27px 20px 33px 88px;
+    padding: 27px 20px 57px 31px;
 
     font-size: 14px;
     line-height: 18px;
 
-    @include viewport--sm {
-      padding: 32px 20px 25px 43px;
+    @include viewport--md {
+      padding: 8px 20px 70px 13px;
       font-size: 16px;
       line-height: 21px;
+    }
+
+    @include viewport--sm {
+      padding: 0 0 59px 0;
+      font-size: 16px;
+      line-height: 36px;
     }
   }
 
@@ -347,39 +340,38 @@
   }
 }
 
-.modal-filter__handle {
-  &::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 95px;
-    width: 18px;
-    height: 18px;
-    background-color: $color-logo;
-    border-radius: 50%;
+// .modal-filter__handle {
+//   position: relative;
+// }
 
-    @include viewport--sm {
-      top: 10px;
-      left: 50px;
-    }
-  }
+// .modal-filter__handle button {
+//   position: absolute;
+//   content: "";
+//   z-index: 1;
+//   width: 15px;
+//   height: 15px;
+//   background-color: $color-logo;
+//   border-radius: 50%;
+//   border: none;
+//   transition: opacity $transition-base;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 271px;
-    width: 18px;
-    height: 18px;
-    background-color: $color-logo;
-    border-radius: 50%;
+//   &:hover,
+//   &:focus {
+//     outline: none;
+//     cursor: pointer;
+//     opacity: 0.5;
+//   }
+// }
 
-    @include viewport--sm {
-      top: 10px;
-      left: 188px;
-    }
-  }
-}
+// .modal-filter__handle-min {
+//   top: -21px;
+//   left: 9px;
+// }
+
+// .modal-filter__handle-max {
+//   top: -21px;
+//   left: 149px;
+// }
 
 .modal-filter__price-min {
   margin-right: 140px;

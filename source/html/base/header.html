@@ -30,26 +30,35 @@
         </svg>
       </a>
 
-      <a href="cart.html">
-        <div class="header__icon-cart">
-          <svg
-            width="20"
-            height="18"
-            viewBox="0 0 20 18"
-            fill="none"
-            stroke="currentColor"
-          >
-            <use xlink:href="#icon_cart"></use>
-          </svg>
-        </div>
+      <a
+        href="cart.html"
+        class="header__icon-cart"
+        aria-label="transfer to cart page"
+      >
+        <svg
+          width="20"
+          height="18"
+          viewBox="0 0 20 18"
+          fill="none"
+          stroke="currentColor"
+        >
+          <use xlink:href="#icon_cart"></use>
+        </svg>
       </a>
 
       <ul class="header__list">
         <li class="header__item">
-          <a href="modal-login.html" class="open-modal-login">Login</a>
+          <a
+            href="modal-login.html"
+            class="open-modal-login"
+            aria-label="transfer to login page"
+            >Login</a
+          >
         </li>
         <li class="header__item">
-          <a href="cart.html">Cart <span>0</span> </a>
+          <a href="cart.html" aria-label="transfer to cart page">
+            Cart <span>0</span>
+          </a>
         </li>
       </ul>
 
@@ -126,7 +135,13 @@
             </li>
           </ul>
 
-          <a class="main-nav__login" href="#">Login</a>
+          <a
+            class="main-nav__login open-modal-login"
+            href="modal-login.html"
+            aria-label="transfer to login page"
+          >
+            Login
+          </a>
         </div>
       </nav>
     </div>

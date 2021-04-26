@@ -76,15 +76,8 @@
   transition: opacity $transition-base;
 
   &:hover,
-  &:focus {
-    outline: none;
+  &:focus-within {
     opacity: 0.5;
-
-    p,
-    .cards__toggle {
-      outline: none;
-      cursor: pointer;
-    }
   }
 }
 
@@ -109,9 +102,10 @@
   background-color: $color-transparent;
   transition: opacity $transition-base;
 
+  &:hover,
   &:focus {
     outline: none;
-    opacity: 0.5;
+    cursor: pointer;
   }
 
   @include viewport--sm {
@@ -153,7 +147,7 @@
   padding: 9px 20px 20px 34px;
 
   &--price {
-    padding: 27px 20px 19px 62px;
+    padding: 15px 0 50px 0;
 
     font-size: 14px;
     line-height: 18px;
@@ -267,7 +261,7 @@
     content: "";
     position: absolute;
     top: 14px;
-    left: 0;
+    left: 25px;
     width: 200px;
     height: 1px;
     background-color: $color-blog;
@@ -285,27 +279,36 @@
 }
 
 .cards__handle {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 69px;
-    width: 15px;
-    height: 15px;
-    background-color: $color-logo;
-    border-radius: 50%;
-  }
+  position: relative;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 7px;
-    right: 60px;
-    width: 15px;
-    height: 15px;
-    background-color: $color-logo;
-    border-radius: 50%;
+.cards__handle button {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  background-color: $color-logo;
+  border-radius: 50%;
+  border: none;
+  transition: opacity $transition-base;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    cursor: pointer;
+    opacity: 0.5;
   }
+}
+
+.cards__handle-min {
+  top: -20px;
+  left: 9px;
+}
+
+.cards__handle-max {
+  top: -20px;
+  left: 115px;
 }
 
 .cards__price-min {
@@ -480,6 +483,7 @@
 }
 
 .cards__pagination-item {
+  position: relative;
   margin-right: 13px;
 
   opacity: 0.5;
@@ -487,6 +491,17 @@
 
   @include viewport--sm {
     margin-right: 23px;
+  }
+}
+
+.cards__pagination-item a {
+  &::before {
+    position: absolute;
+    content: "";
+    top: -4px;
+    left: -8px;
+    width: 28px;
+    height: 30px;
   }
 }
 

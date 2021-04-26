@@ -108,6 +108,11 @@
     font-size: 16px;
     line-height: 22px;
   }
+
+  &:hover,
+  &:focus-within {
+    opacity: 0.5;
+  }
 }
 
 .faq__toggle {
@@ -139,11 +144,10 @@
     height: 112px;
   }
 
-  &:hover,
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
     cursor: pointer;
-    opacity: 0.5;
   }
 
   .faq__btn-close {
