@@ -50,12 +50,12 @@
 .cards__options--price .noUi-handle {
   width: 15px;
   height: 15px;
-  left: 35px;
-  top: -6px;
+  left: 34px;
+  top: -8px;
 }
 
 .cards__options--price .noUi-handle-upper {
-  left: 38px;
+  left: 40px;
 }
 
 .modal-filter__options--price .noUi-target {
@@ -68,8 +68,8 @@
 .modal-filter__options--price .noUi-handle {
   width: 18px;
   height: 18px;
-  left: -19px;
-  top: -6px;
+  left: -21px;
+  top: -7px;
 
   @include viewport--sm {
     top: -8px;
@@ -78,7 +78,7 @@
 }
 
 .modal-filter__options--price .noUi-handle-upper {
-  left: 5px;
+  left: 3px;
 
   @include viewport--sm {
     top: -8px;
@@ -118,5 +118,18 @@
 .noUi-horizontal .noUi-tooltip {
   transform: translateX(-50%);
   left: 50%;
-  bottom: -209%;
+  bottom: -185%;
 }
+
+.cards__options--price .noUi-horizontal .noUi-tooltip {
+  bottom: -185%;
+}
+
+.modal-filter__options--price .noUi-horizontal .noUi-tooltip {
+  bottom: -167%;
+
+  @include viewport--sm {
+    bottom: -209%;
+  }
+}
+
