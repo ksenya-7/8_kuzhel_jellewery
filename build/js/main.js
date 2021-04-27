@@ -275,16 +275,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initModalCard", function() { return initModalCard; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initModalLogin", function() { return initModalLogin; });
 /* harmony import */ var _utils_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/modal */ "./js/utils/modal.js");
+/* harmony import */ var _utils_scroll_lock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/scroll-lock */ "./js/utils/scroll-lock.js");
+
 
 var modalFilter = document.querySelector('.modal-filter');
 var modalFilterButtons = document.querySelectorAll('.open-modal-filter');
 var modalCard = document.querySelector('.modal-card');
 var modalCardButtons = document.querySelectorAll('.open-modal-card');
 var modalLogin = document.querySelector('.modal-login');
+var nav = document.querySelector('.header');
 var modalLoginButtons = document.querySelectorAll('.open-modal-login');
 var emailInput = document.querySelector('.modal-login__content input[type="email"]');
-var isStorageSupport = true;
-var storageEmailUser = '';
+var isStorageSupport = true; // let isOpenMenu = false;
+
+var storageEmailUser = ''; // isOpenMenu = nav.classList.contains('open') ? true : false;
+// const checkOpenMenu = () => {
+//   if (isOpenMenu) {
+//     disableScrolling();
+//   }
+// };
 
 var focusTextInput = function focusTextInput() {
   if (emailInput) {
@@ -308,7 +317,7 @@ var focusTextInput = function focusTextInput() {
 
 var initModalLogin = function initModalLogin() {
   if (modalLogin && modalLoginButtons.length) {
-    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modalLogin, false, modalLoginButtons, focusTextInput, false, false);
+    Object(_utils_modal__WEBPACK_IMPORTED_MODULE_0__["setupModal"])(modalLogin, false, modalLoginButtons, focusTextInput, false, true);
   }
 };
 

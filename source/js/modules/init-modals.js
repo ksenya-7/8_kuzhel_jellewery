@@ -1,4 +1,5 @@
 import {setupModal, openModal} from '../utils/modal';
+import {disableScrolling} from '../utils/scroll-lock';
 
 const modalFilter = document.querySelector('.modal-filter');
 const modalFilterButtons = document.querySelectorAll('.open-modal-filter');
@@ -7,11 +8,21 @@ const modalCard = document.querySelector('.modal-card');
 const modalCardButtons = document.querySelectorAll('.open-modal-card');
 
 const modalLogin = document.querySelector('.modal-login');
+const nav = document.querySelector('.header');
 const modalLoginButtons = document.querySelectorAll('.open-modal-login');
 const emailInput = document.querySelector('.modal-login__content input[type="email"]');
 let isStorageSupport = true;
+// let isOpenMenu = false;
 let storageEmailUser = '';
 
+// isOpenMenu = nav.classList.contains('open') ? true : false;
+
+// const checkOpenMenu = () => {
+
+//   if (isOpenMenu) {
+//     disableScrolling();
+//   }
+// };
 
 const focusTextInput = () => {
   if (emailInput) {
@@ -34,7 +45,7 @@ const focusTextInput = () => {
 
 const initModalLogin = () => {
   if (modalLogin && modalLoginButtons.length) {
-    setupModal(modalLogin, false, modalLoginButtons, focusTextInput, false, false);
+    setupModal(modalLogin, false, modalLoginButtons, focusTextInput, false, true);
   }
 };
 
