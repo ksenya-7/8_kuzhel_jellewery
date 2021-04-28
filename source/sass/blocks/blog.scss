@@ -7,11 +7,11 @@
   margin: 75px auto 0;
 
   @include viewport--md {
-    margin: 34px auto 0;
+    margin: 34px auto 1px;
   }
 
   @include viewport--sm {
-    margin: 21px auto 0;
+    margin: 21px auto 1px;
   }
 }
 

@@ -153,6 +153,7 @@
   transition: opacity $transition-base;
 
   @include viewport--sm {
+    width: 165px;
     margin-right: 10px;
   }
 
@@ -165,8 +166,9 @@
 .footer__button {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 
-  width: 103px;
+  width: 105px;
   margin-left: auto;
   padding: 10px 0;
 
@@ -191,7 +193,7 @@
 .footer__button span {
   flex-shrink: 0;
   margin-right: 12px;
-  width: 62px;
+  width: 63px;
 
   @include viewport--lg {
     width: 61%;
